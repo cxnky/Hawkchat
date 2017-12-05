@@ -64,6 +64,7 @@ namespace Hawkchat.Server
         {
 
             Console.WriteLine("Client disconnected");
+            
 
         }
 
