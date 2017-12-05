@@ -225,6 +225,7 @@
             this.btnLogin.Image.Size = new System.Drawing.Size(24, 24);
             this.btnLogin.Image.Visible = false;
             this.btnLogin.Location = new System.Drawing.Point(258, 167);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(140, 30);
@@ -267,6 +268,7 @@
             this.btnRegister.Image.Size = new System.Drawing.Size(24, 24);
             this.btnRegister.Image.Visible = false;
             this.btnRegister.Location = new System.Drawing.Point(13, 168);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(0);
             this.btnRegister.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(140, 30);
@@ -274,6 +276,7 @@
             this.btnRegister.Text = "Register";
             this.btnRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.btnRegister.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // LoginWindow
             // 
@@ -311,6 +314,7 @@
             this.Name = "LoginWindow";
             this.ShowIcon = false;
             this.Text = "Hawkchat";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginWindow_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -7,8 +7,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VisualPlus.Toolkit.Controls.Layout;
@@ -17,32 +19,37 @@ namespace Hawkchat.Client
 {
     public partial class LoginWindow : VisualForm
     {
+
+        public static long ACCOUNTID;
+
         public LoginWindow()
         {
 
             InitializeComponent();
-            
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private SimpleTcpClient client;
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-
-
-            // TODO: Check if servers are online, Check if server maintenance is in place
+            try
+            {
 #if DEBUG
-            client = new SimpleTcpClient().Connect("127.0.0.1", 3289);
+                client = new SimpleTcpClient().Connect("127.0.0.1", 3289);
 #else
             client = new SimpleTcpClient().Connect("server ip", 3289);
 #endif
+                
 
+            } catch (Exception)
+            {
+
+                MessageBox.Show("Our login server is currently undergoing maintenance. Sorry for any inconvenience.", "Server Maintenance", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Environment.Exit(-1);
+
+            }
+        }
+        
+        public static SimpleTcpClient client;
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            
             dynamic authJson = new JObject();
 
             authJson.command = "AUTH";
@@ -51,7 +58,7 @@ namespace Hawkchat.Client
             authJson.IP = Utils.GetIP();
 
 
-            SimpleTCP.Message message = client.WriteLineAndGetReply(authJson.ToString(Formatting.None), TimeSpan.FromSeconds(10));
+            SimpleTCP.Message message = client.WriteLineAndGetReply(authJson.ToString(Formatting.None), TimeSpan.FromSeconds(30));
 
             JObject returnedJson = JObject.Parse(message.MessageString);
 
@@ -61,6 +68,9 @@ namespace Hawkchat.Client
             {
 
                 // Show main window
+                ACCOUNTID = long.Parse(returnedJson["accountID"].ToString());
+
+                btnLogin.Enabled = false;
 
             } else
             {
@@ -71,7 +81,30 @@ namespace Hawkchat.Client
             }
 
         }
-       
 
+        private void LoginWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (client.TcpClient.Connected)
+            {
+                dynamic disconnectJson = new JObject();
+
+                disconnectJson.command = "DISCONNECT";
+
+                client.WriteLine(disconnectJson.ToString(Formatting.None));
+
+
+
+            }
+
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+
+            RegisterForm registerForm = new RegisterForm();
+            
+            registerForm.ShowDialog();
+
+        }
     }
 }

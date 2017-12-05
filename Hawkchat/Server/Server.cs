@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Server.utils;
 using SimpleTCP;
+using Hawkchat.Server.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hawkchat.Server.stats;
 
 namespace Hawkchat.Server
 {
@@ -36,13 +37,13 @@ namespace Hawkchat.Server
             foreach(string line in INTRO_ASCII_ART)
             {
 
-                Utils.CyanWriteLine(line);
+                Util.CyanWriteLine(line);
 
             }
 
             Console.WriteLine();
 
-            Utils.CyanWriteLine("[INIT] Starting server thread...");
+            Util.CyanWriteLine("[INIT] Starting server thread...");
 
             serverWorker = new BackgroundWorker();
 
@@ -66,7 +67,7 @@ namespace Hawkchat.Server
 
             server = new SimpleTcpServer().Start(3289);
 
-            Utils.CyanWriteLine("[INIT] Server listening on port 3289.");
+            Util.CyanWriteLine("[INIT] Server listening on port 3289.");
 
             server.ClientConnected += Server_ClientConnected;
             server.ClientDisconnected += Server_ClientDisconnected;
@@ -78,31 +79,30 @@ namespace Hawkchat.Server
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
         {
 
-            string properJson = Utils.RemoveEndSpecialCharacter(e.MessageString);
+            string properJson = Util.RemoveEndSpecialCharacter(e.MessageString);
 
-            Utils.CyanWriteLine($"Received message from {e.TcpClient.Client.RemoteEndPoint}: {properJson}");
+            StatsTracker.IncreaseBytesReceived(e.Data.Length);
+
+            Util.CyanWriteLine($"Received message from {e.TcpClient.Client.RemoteEndPoint}: {properJson}");
 
             JObject json = JObject.Parse(properJson);
 
             string command = json["command"].ToString();
 
-            Parser.ParseCommand(command, e);
+            Parser.ParseCommand(command, e, json);
 
         }
 
         private void Server_ClientDisconnected(object sender, System.Net.Sockets.TcpClient e)
         {
-
-            Utils.CyanWriteLine("Client disconnected");
             
-
+            Util.RemoveUserOnline(Util.ReturnClientModel(e));
+            
         }
 
         private void Server_ClientConnected(object sender, System.Net.Sockets.TcpClient e)
         {
-
-            Utils.CyanWriteLine("Client connected.");
-
+            
         }
     }
 }
