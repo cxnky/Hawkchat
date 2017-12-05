@@ -1,4 +1,6 @@
-﻿using Server.utils;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Server.utils;
 using SimpleTCP;
 using System;
 using System.Collections.Generic;
@@ -15,10 +17,30 @@ namespace Hawkchat.Server
 
         private static BackgroundWorker serverWorker;
 
+        private static string[] INTRO_ASCII_ART = new[] {" _    _                _     _____ _           _   ",
+@"| |  | |              | |   / ____| |         | |           ",
+@"| |__| | __ ___      _| | _| |    | |__   __ _| |_          ",
+@"|  __  |/ _` \ \ /\ / / |/ / |    | '_ \ / _` | __|         ",
+@"| |  | | (_| |\ V  V /|   <| |____| | | | (_| | |_          ",
+@"|_|  |_|\__,_| \_/\_/ |_|\_\\_____|_| |_|\__,_|\__|         "
+
+
+                                                    };
+
+
         static void Main(string[] args) => new Server().Start().GetAwaiter().GetResult();
 
         private async Task Start()
         {
+
+            foreach(string line in INTRO_ASCII_ART)
+            {
+
+                Utils.CyanWriteLine(line);
+
+            }
+
+            Console.WriteLine();
 
             Utils.CyanWriteLine("[INIT] Starting server thread...");
 
@@ -35,7 +57,7 @@ namespace Hawkchat.Server
 
         }
 
-        SimpleTcpServer server;
+        public static SimpleTcpServer server;
 
         //todo: add pool of servers?
 
@@ -56,14 +78,22 @@ namespace Hawkchat.Server
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
         {
 
-            Console.WriteLine($"Received message from {e.TcpClient.Client.RemoteEndPoint}: {e.MessageString}");
+            string properJson = Utils.RemoveEndSpecialCharacter(e.MessageString);
+
+            Utils.CyanWriteLine($"Received message from {e.TcpClient.Client.RemoteEndPoint}: {properJson}");
+
+            JObject json = JObject.Parse(properJson);
+
+            string command = json["command"].ToString();
+
+            Parser.ParseCommand(command, e);
 
         }
 
         private void Server_ClientDisconnected(object sender, System.Net.Sockets.TcpClient e)
         {
 
-            Console.WriteLine("Client disconnected");
+            Utils.CyanWriteLine("Client disconnected");
             
 
         }
@@ -71,7 +101,7 @@ namespace Hawkchat.Server
         private void Server_ClientConnected(object sender, System.Net.Sockets.TcpClient e)
         {
 
-            Console.WriteLine("Client connected.");
+            Utils.CyanWriteLine("Client connected.");
 
         }
     }

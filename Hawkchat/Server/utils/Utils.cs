@@ -20,5 +20,18 @@ namespace Server.utils
 
         }
 
+        public static string RemoveEndSpecialCharacter(string data)
+        {
+
+            byte[] stringAsBytes = Encoding.ASCII.GetBytes(data);
+
+            byte[] tmpArray = new byte[stringAsBytes.Length - 1];
+
+            Array.Copy(stringAsBytes, tmpArray, stringAsBytes.Length - 1);
+
+            return Encoding.Default.GetString(tmpArray);
+
+        }
+
     }
 }
