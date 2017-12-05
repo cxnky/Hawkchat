@@ -13,16 +13,11 @@ namespace Hawkchat.Server
     class Server
     {
 
-        private static BackgroundWorker serverWorker; 
-        
-        static void Main(string[] args)
-        {
+        private static BackgroundWorker serverWorker;
 
-            new Server().Start();
+        static void Main(string[] args) => new Server().Start().GetAwaiter().GetResult();
 
-        }
-
-        private void Start()
+        private async Task Start()
         {
 
             Utils.CyanWriteLine("[INIT] Starting server thread...");
@@ -35,6 +30,8 @@ namespace Hawkchat.Server
             serverWorker.WorkerReportsProgress = false;
 
             serverWorker.RunWorkerAsync();
+
+            await Task.Delay(-1);
 
         }
 
@@ -59,18 +56,22 @@ namespace Hawkchat.Server
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
         {
 
-            MessageBox.Show(e.MessageString);
+            Console.WriteLine($"Received message from {e.TcpClient.Client.RemoteEndPoint}: {e.MessageString}");
 
         }
 
         private void Server_ClientDisconnected(object sender, System.Net.Sockets.TcpClient e)
         {
-            throw new NotImplementedException();
+
+            Console.WriteLine("Client disconnected");
+
         }
 
         private void Server_ClientConnected(object sender, System.Net.Sockets.TcpClient e)
         {
-            throw new NotImplementedException();
+
+            Console.WriteLine($"Client connected.");
+
         }
     }
 }
