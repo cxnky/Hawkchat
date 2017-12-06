@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Hawkchat.Client.utils;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,9 @@ namespace Hawkchat.Client
             if (!txtPasswordOnce.Text.Equals(txtConfirmPassword.Text))
             {
 
+                txtPasswordNotMatchError.Text = "Your passwords do not match.";
+                txtPasswordNotMatchError.ForeColor = Color.Red;
+
                 txtPasswordNotMatchError.Visible = true;
                 await Task.Delay(5000);
                 txtPasswordNotMatchError.Visible = false;
@@ -51,17 +55,49 @@ namespace Hawkchat.Client
 
             JObject verifyUsernameJsonReturned = JObject.Parse(message.MessageString);
 
-            if (bool.Parse(verifyUsernameJsonReturned["exists"].ToString()))
+            bool exists = bool.Parse(verifyUsernameJsonReturned["exists"].ToString());
+
+            if (exists)
             {
 
                 // username exists
+                txtUsernameTaken.Text = "That username is already taken.";
+                txtUsernameTaken.ForeColor = Color.Red;
+
                 txtUsernameTaken.Visible = true;
                 await Task.Delay(5000);
                 txtUsernameTaken.Visible = false;
 
                 return;
 
+            } else
+            {
+
+                txtUsernameTaken.Text = "That username is available";
+                txtUsernameTaken.ForeColor = Color.Green;
+
+                txtUsernameTaken.Visible = true;
+                await Task.Delay(5000);
+                txtUsernameTaken.Visible = false;
+
             }
+
+            // everything checked out, process the registration
+            dynamic registrationJson = new JObject();
+
+            registrationJson.command = "REGISTER";
+            registrationJson.username = txtUsername.Text.Trim();
+            registrationJson.password = Utils.SHA1(txtConfirmPassword.Text);
+            registrationJson.IP = Utils.GetIP();
+
+            SimpleTCP.Message registrationCallback = LoginWindow.client.WriteLineAndGetReply(registrationJson.ToString(Formatting.None), TimeSpan.FromSeconds(60));
+
+            JObject jObject = JObject.Parse(registrationCallback.MessageString);
+
+            LoginWindow.ACCOUNTID = long.Parse(jObject["AccountID"].ToString());
+            LoginWindow.USERNAME = jObject["username"].ToString();
+
+            MessageBox.Show("Show the main program UI here...");
 
         }
     }

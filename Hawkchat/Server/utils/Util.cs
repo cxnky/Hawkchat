@@ -23,6 +23,15 @@ namespace Hawkchat.Server.Utils
 
         }
 
+        public static long GenerateAccountID()
+        {
+
+            Random rand = new Random();
+
+            return rand.Next(1000000, 9999999);
+
+        }
+
         public static string RemoveEndSpecialCharacter(string data)
         {
 

@@ -11,7 +11,7 @@ namespace Hawkchat.Server
     public class Parser
     {
 
-        public static void ParseCommand(string command, Message message, JObject json = null)
+        public static async void ParseCommand(string command, Message message, JObject json = null)
         {
 
             dynamic jsonResponse = new JObject();
@@ -76,6 +76,43 @@ namespace Hawkchat.Server
                     }
 
                     Util.AddUserOnline(message.TcpClient, json["username"].ToString(), json["IP"].ToString(), port, userID);
+
+                    break;
+
+                case "REGISTER":
+
+                    string usrName = json["username"].ToString();
+                    string pwd = json["password"].ToString();
+                    string IPAddress = json["IP"].ToString();
+
+                    long AccountID = Util.GenerateAccountID();
+
+                    SQLiteConnection sQLiteConnection = DBUtils.EstablishConnection();
+
+                    int rowsAffected = await DBUtils.ExecuteNonQuery(sQLiteConnection, $"INSERT INTO users (AccountID, username, password, lastip) VALUES ('{AccountID}', '{usrName}', '{pwd}', '{IPAddress}')");
+
+                    
+                    if (rowsAffected == 1)
+                    {
+
+                        jsonResponse.success = true;
+                        jsonResponse.AccountID = AccountID;
+                        jsonResponse.username = usrName;
+
+                        DBUtils.CloseConnection(sQLiteConnection);
+
+                        message.Reply(jsonResponse.ToString(Formatting.None));
+
+                    } else
+                    {
+
+                        jsonResponse.success = false;
+
+                        DBUtils.CloseConnection(sQLiteConnection);
+
+                        message.Reply(jsonResponse.ToString(Formatting.None));
+
+                    }
 
                     break;
 

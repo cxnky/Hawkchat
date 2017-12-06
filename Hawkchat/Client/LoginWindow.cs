@@ -21,6 +21,7 @@ namespace Hawkchat.Client
     {
 
         public static long ACCOUNTID;
+        public static string USERNAME;
 
         public LoginWindow()
         {
