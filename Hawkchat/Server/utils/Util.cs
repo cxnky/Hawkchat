@@ -28,7 +28,7 @@ namespace Hawkchat.Server.Utils
 
             Random rand = new Random();
 
-            return rand.Next(1000000, 9999999);
+            return rand.Next(10000000, 99999999);
 
         }
 
