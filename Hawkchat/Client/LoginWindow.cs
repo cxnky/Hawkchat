@@ -32,11 +32,12 @@ namespace Hawkchat.Client
 #if DEBUG
                 client = new SimpleTcpClient().Connect("127.0.0.1", 3289);
 #else
-            client = new SimpleTcpClient().Connect("server ip", 3289);
+               client = new SimpleTcpClient().Connect("81.109.173.49", 3289);
 #endif
-                
 
-            } catch (Exception)
+
+            }
+            catch (Exception)
             {
 
                 MessageBox.Show("Our login server is currently undergoing maintenance. Sorry for any inconvenience.", "Server Maintenance", MessageBoxButtons.OK, MessageBoxIcon.Error);
