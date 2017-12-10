@@ -68,9 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="enums\ConnectionStatus.cs" />
+    <Compile Include="enums\ReportCategory.cs" />
     <Compile Include="enums\Status.cs" />
     <Compile Include="models\ClientModel.cs" />
     <Compile Include="models\UserBan.cs" />
+    <Compile Include="models\UserReport.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

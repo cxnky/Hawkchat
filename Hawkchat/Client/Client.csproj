@@ -60,7 +60,7 @@
       <HintPath>..\packages\SimpleTCP.1.0.24\lib\net45\SimpleTCP.dll</HintPath>
     </Reference>
     <Reference Include="SUF">
-      <HintPath>..\..\..\..\..\Source\Repos\BUF\BUF\bin\Debug\SUF.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Documents\BUF\BUF\bin\Debug\SUF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -90,6 +90,7 @@
     <Compile Include="LoginWindow.Designer.cs">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="models\ReportMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForm.cs">

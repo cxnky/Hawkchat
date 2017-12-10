@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SimpleTCP;
-using Hawkchat.Server.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hawkchat.Server.stats;
+using Hawkchat.Server.utils;
 
 namespace Hawkchat.Server
 {

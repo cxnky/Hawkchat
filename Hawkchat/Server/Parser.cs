@@ -1,6 +1,6 @@
-﻿using Hawkchat.Server.models;
+﻿using Hawkchat.Server.enums;
+using Hawkchat.Server.models;
 using Hawkchat.Server.utils;
-using Hawkchat.Server.Utils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SimpleTCP;
@@ -89,7 +89,7 @@ namespace Hawkchat.Server
                     DBUtils.CloseConnection(connection);
 
                     message.Reply(jsonResponse.ToString(Formatting.None));
-                    
+
                     int port = int.Parse(message.TcpClient.Client.RemoteEndPoint.ToString().Split(':')[1]);
 
                     Int64 userID;
@@ -122,7 +122,7 @@ namespace Hawkchat.Server
 
                     int rowsAffected = await DBUtils.ExecuteNonQuery(sQLiteConnection, $"INSERT INTO users (AccountID, username, password, lastip) VALUES ('{AccountID}', '{usrName}', '{pwd}', '{IPAddress}')");
 
-                    
+
                     if (rowsAffected == 1)
                     {
 
@@ -176,8 +176,67 @@ namespace Hawkchat.Server
                     break;
 
                 case "DISCONNECT":
-                    
+
                     Util.RemoveUserOnline(Util.ReturnClientModel(message.TcpClient));
+
+                    break;
+
+                case "REPORT":
+
+                    UserReport report = new UserReport();
+
+                    report.ReporterAccountID = long.Parse(json["reporterid"].ToString());
+                    report.ReportedAccountID = long.Parse(json["reportedid"].ToString());
+                    report.ReportID = Util.GenerateAccountID();
+
+                    string categoryText = json["category"].ToString();
+
+                    switch (categoryText)
+                    {
+
+                        case "RACISM":
+                            report.ReportCategory = ReportCategory.RACIST;
+                            break;
+
+                        case "OFFENSIVE":
+                            report.ReportCategory = ReportCategory.OFFENSIVE;
+                            break;
+
+                        case "SPAM":
+                            report.ReportCategory = ReportCategory.SPAM;
+                            break;
+
+                        case "COMPROMISEDACCOUNT":
+                            report.ReportCategory = ReportCategory.ACCOUNTHACKED;
+                            break;
+
+                        case "DOX":
+                            report.ReportCategory = ReportCategory.PERSONALINFORMATION;
+                            break;
+
+                        default:
+                            report.ReportCategory = ReportCategory.OTHER;
+                            break;
+
+                    }
+
+                    report.Timestamp = (long)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+                    report.ChatLogURL = Util.CreateChatLog(json, report);
+
+                    if (await Util.CreateReport(report))
+                    {
+
+                        // report made successfully
+                        jsonResponse.success = true;
+
+                    } else
+                    {
+                        // failed to create report
+                        jsonResponse.success = false;
+
+                    }
+
+                    message.Reply(jsonResponse.ToString(Formatting.None));
                     
                     break;
 
