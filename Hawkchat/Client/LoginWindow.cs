@@ -22,7 +22,7 @@ namespace Hawkchat.Client
     {
 
         public static long ACCOUNTID;
-        public static string USERNAME;
+        public static string USERNAME, AVATAR_URL;
 
         public LoginWindow()
         {
@@ -72,6 +72,8 @@ namespace Hawkchat.Client
 
                 // show main window
                 ACCOUNTID = long.Parse(returnedJson["accountID"].ToString());
+                USERNAME = txtUsername.Text.Trim();
+                AVATAR_URL = returnedJson["avatarURL"].ToString();
 
 #if DEBUG
                 btnLogin.Enabled = true;

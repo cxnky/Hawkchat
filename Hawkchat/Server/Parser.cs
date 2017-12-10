@@ -49,18 +49,20 @@ namespace Hawkchat.Server
 
                     }
 
-                    string UserID = "";
+                    string UserID = "", avatarURL = "";
 
                     while (reader.Read())
                     {
 
                         UserID = reader["AccountID"].ToString();
+                        avatarURL = reader["avatarurl"].ToString();
 
                     }
 
                     reader.Close();
 
                     jsonResponse.accountID = UserID;
+                    jsonResponse.avatarURL = avatarURL;
 
                     string banQuery = $"SELECT * FROM bans WHERE accountid='{UserID}'";
 
@@ -115,12 +117,13 @@ namespace Hawkchat.Server
                     string usrName = json["username"].ToString();
                     string pwd = json["password"].ToString();
                     string IPAddress = json["IP"].ToString();
+                    string avatarURLl = json["avatarURL"].ToString();
 
                     long AccountID = Util.GenerateAccountID();
 
                     SQLiteConnection sQLiteConnection = DBUtils.EstablishConnection();
 
-                    int rowsAffected = await DBUtils.ExecuteNonQuery(sQLiteConnection, $"INSERT INTO users (AccountID, username, password, lastip) VALUES ('{AccountID}', '{usrName}', '{pwd}', '{IPAddress}')");
+                    int rowsAffected = await DBUtils.ExecuteNonQuery(sQLiteConnection, $"INSERT INTO users (AccountID, username, password, avatarurl, lastip) VALUES ('{AccountID}', '{usrName}', '{pwd}', '{avatarURLl}', '{IPAddress}')");
 
 
                     if (rowsAffected == 1)
@@ -129,6 +132,7 @@ namespace Hawkchat.Server
                         jsonResponse.success = true;
                         jsonResponse.AccountID = AccountID;
                         jsonResponse.username = usrName;
+                        jsonResponse.avatarURL = avatarURLl;
 
                         DBUtils.CloseConnection(sQLiteConnection);
 

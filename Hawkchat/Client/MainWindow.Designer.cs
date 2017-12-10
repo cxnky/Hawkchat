@@ -42,10 +42,9 @@
             VisualPlus.Structure.Border border10 = new VisualPlus.Structure.Border();
             VisualPlus.Structure.Border border11 = new VisualPlus.Structure.Border();
             VisualPlus.Structure.Border border12 = new VisualPlus.Structure.Border();
-            this.visualGroupBox1 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
+            this.groupBoxUserInfo = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.visualButton1 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.visualLabel1 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.lblLoggedInUserStatus = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox1 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
             this.visualPanel1 = new VisualPlus.Toolkit.Controls.Layout.VisualPanel();
             this.visualButton11 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
@@ -57,17 +56,14 @@
             this.visualGroupBox2 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.visualButton3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualButton2 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.visualLabel2 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualGroupBox3 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.visualButton4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualButton5 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.visualLabel3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualGroupBox4 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.visualButton6 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualButton7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.visualLabel4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualComboBox1 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.visualContextMenuStrip1 = new VisualPlus.Toolkit.Controls.Navigation.VisualContextMenuStrip();
@@ -81,51 +77,56 @@
             this.unblockToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.contactNameToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.unblockToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.userProfilePicture = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.groupBoxUserInfo.SuspendLayout();
             this.visualPanel1.SuspendLayout();
             this.visualGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.visualGroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.visualGroupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.visualContextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // visualGroupBox1
+            // groupBoxUserInfo
             // 
-            this.visualGroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.visualGroupBox1.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualGroupBox1.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualGroupBox1.BackgroundStateGradientBrush = null;
-            this.visualGroupBox1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.visualGroupBox1.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualGroupBox1.Border.HoverVisible = true;
-            this.visualGroupBox1.Border.Rounding = 6;
-            this.visualGroupBox1.Border.Thickness = 1;
-            this.visualGroupBox1.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualGroupBox1.Border.Visible = true;
-            this.visualGroupBox1.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
-            this.visualGroupBox1.ControlBrushCollection = null;
-            this.visualGroupBox1.Controls.Add(this.visualButton1);
-            this.visualGroupBox1.Controls.Add(this.pictureBox1);
-            this.visualGroupBox1.Controls.Add(this.visualLabel1);
-            this.visualGroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.visualGroupBox1.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualGroupBox1.Location = new System.Drawing.Point(12, 55);
-            this.visualGroupBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualGroupBox1.Name = "visualGroupBox1";
-            this.visualGroupBox1.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
-            this.visualGroupBox1.Separator = true;
-            this.visualGroupBox1.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualGroupBox1.Size = new System.Drawing.Size(220, 80);
-            this.visualGroupBox1.TabIndex = 0;
-            this.visualGroupBox1.Text = "My Name";
-            this.visualGroupBox1.TextAlignment = System.Drawing.StringAlignment.Far;
-            this.visualGroupBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualGroupBox1.TitleAlignment = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.TitleAlignments.Top;
-            this.visualGroupBox1.TitleBoxHeight = 25;
+            this.groupBoxUserInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            this.groupBoxUserInfo.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.groupBoxUserInfo.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.groupBoxUserInfo.BackgroundStateGradientBrush = null;
+            this.groupBoxUserInfo.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.groupBoxUserInfo.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.groupBoxUserInfo.Border.HoverVisible = true;
+            this.groupBoxUserInfo.Border.Rounding = 6;
+            this.groupBoxUserInfo.Border.Thickness = 1;
+            this.groupBoxUserInfo.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.groupBoxUserInfo.Border.Visible = true;
+            this.groupBoxUserInfo.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
+            this.groupBoxUserInfo.ControlBrushCollection = null;
+            this.groupBoxUserInfo.Controls.Add(this.userProfilePicture);
+            this.groupBoxUserInfo.Controls.Add(this.visualButton1);
+            this.groupBoxUserInfo.Controls.Add(this.lblLoggedInUserStatus);
+            this.groupBoxUserInfo.ForeColor = System.Drawing.Color.Black;
+            this.groupBoxUserInfo.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.groupBoxUserInfo.Location = new System.Drawing.Point(16, 68);
+            this.groupBoxUserInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxUserInfo.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.groupBoxUserInfo.Name = "groupBoxUserInfo";
+            this.groupBoxUserInfo.Padding = new System.Windows.Forms.Padding(7, 32, 7, 6);
+            this.groupBoxUserInfo.Separator = true;
+            this.groupBoxUserInfo.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.groupBoxUserInfo.Size = new System.Drawing.Size(293, 98);
+            this.groupBoxUserInfo.TabIndex = 0;
+            this.groupBoxUserInfo.Text = "My Name";
+            this.groupBoxUserInfo.TextAlignment = System.Drawing.StringAlignment.Far;
+            this.groupBoxUserInfo.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.groupBoxUserInfo.TitleAlignment = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.TitleAlignments.Top;
+            this.groupBoxUserInfo.TitleBoxHeight = 25;
             // 
             // visualButton1
             // 
@@ -156,56 +157,46 @@
             border1.Visible = false;
             this.visualButton1.Image.Border = border1;
             this.visualButton1.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
-            this.visualButton1.Image.Point = new System.Drawing.Point(52, 2);
+            this.visualButton1.Image.Point = new System.Drawing.Point(74, 5);
             this.visualButton1.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton1.Image.Visible = false;
-            this.visualButton1.Location = new System.Drawing.Point(88, 49);
+            this.visualButton1.Location = new System.Drawing.Point(117, 60);
             this.visualButton1.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton1.Name = "visualButton1";
-            this.visualButton1.Size = new System.Drawing.Size(129, 28);
+            this.visualButton1.Size = new System.Drawing.Size(172, 34);
             this.visualButton1.TabIndex = 3;
             this.visualButton1.Text = "Account & Settings";
             this.visualButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.visualButton1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualButton1.Click += new System.EventHandler(this.visualButton1_Click);
             // 
-            // pictureBox1
+            // lblLoggedInUserStatus
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // visualLabel1
-            // 
-            this.visualLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualLabel1.BackgroundStateGradientBrush = null;
-            this.visualLabel1.ControlBrushCollection = null;
-            this.visualLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.visualLabel1.ForeColor = System.Drawing.Color.Red;
-            this.visualLabel1.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualLabel1.Location = new System.Drawing.Point(174, 19);
-            this.visualLabel1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel1.Name = "visualLabel1";
-            this.visualLabel1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel1.Outline = false;
-            this.visualLabel1.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel1.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel1.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel1.ReflectionSpacing = 0;
-            this.visualLabel1.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel1.ShadowDirection = 315;
-            this.visualLabel1.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel1.ShadowOpacity = 100;
-            this.visualLabel1.Size = new System.Drawing.Size(43, 23);
-            this.visualLabel1.TabIndex = 1;
-            this.visualLabel1.Text = "Offline";
-            this.visualLabel1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.lblLoggedInUserStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.lblLoggedInUserStatus.BackgroundStateGradientBrush = null;
+            this.lblLoggedInUserStatus.ControlBrushCollection = null;
+            this.lblLoggedInUserStatus.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoggedInUserStatus.ForeColor = System.Drawing.Color.Red;
+            this.lblLoggedInUserStatus.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.lblLoggedInUserStatus.Location = new System.Drawing.Point(232, 23);
+            this.lblLoggedInUserStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.lblLoggedInUserStatus.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.lblLoggedInUserStatus.Name = "lblLoggedInUserStatus";
+            this.lblLoggedInUserStatus.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.lblLoggedInUserStatus.Outline = false;
+            this.lblLoggedInUserStatus.OutlineColor = System.Drawing.Color.Red;
+            this.lblLoggedInUserStatus.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.lblLoggedInUserStatus.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblLoggedInUserStatus.ReflectionSpacing = 0;
+            this.lblLoggedInUserStatus.ShadowColor = System.Drawing.Color.Black;
+            this.lblLoggedInUserStatus.ShadowDirection = 315;
+            this.lblLoggedInUserStatus.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.lblLoggedInUserStatus.ShadowOpacity = 100;
+            this.lblLoggedInUserStatus.Size = new System.Drawing.Size(57, 28);
+            this.lblLoggedInUserStatus.TabIndex = 1;
+            this.lblLoggedInUserStatus.Text = "Offline";
+            this.lblLoggedInUserStatus.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
             // visualTextBox1
             // 
@@ -241,16 +232,17 @@
             this.visualTextBox1.Image = null;
             this.visualTextBox1.ImageVisible = false;
             this.visualTextBox1.ImageWidth = 35;
-            this.visualTextBox1.Location = new System.Drawing.Point(13, 136);
+            this.visualTextBox1.Location = new System.Drawing.Point(17, 167);
+            this.visualTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.visualTextBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox1.Name = "visualTextBox1";
             this.visualTextBox1.PasswordChar = '\0';
             this.visualTextBox1.ReadOnly = false;
             this.visualTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.visualTextBox1.Size = new System.Drawing.Size(220, 23);
+            this.visualTextBox1.Size = new System.Drawing.Size(293, 25);
             this.visualTextBox1.TabIndex = 1;
             this.visualTextBox1.Text = "Search Contacts";
-            this.visualTextBox1.TextBoxWidth = 210;
+            this.visualTextBox1.TextBoxWidth = 377;
             this.visualTextBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.visualTextBox1.Watermark.ActiveColor = System.Drawing.Color.Gray;
             this.visualTextBox1.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -280,11 +272,12 @@
             this.visualPanel1.Controls.Add(this.visualTextBox2);
             this.visualPanel1.ForeColor = System.Drawing.Color.Black;
             this.visualPanel1.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualPanel1.Location = new System.Drawing.Point(238, 55);
+            this.visualPanel1.Location = new System.Drawing.Point(317, 68);
+            this.visualPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.visualPanel1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualPanel1.Name = "visualPanel1";
-            this.visualPanel1.Padding = new System.Windows.Forms.Padding(5);
-            this.visualPanel1.Size = new System.Drawing.Size(412, 392);
+            this.visualPanel1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.visualPanel1.Size = new System.Drawing.Size(549, 482);
             this.visualPanel1.TabIndex = 2;
             this.visualPanel1.Text = "visualPanel1";
             this.visualPanel1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
@@ -318,14 +311,14 @@
             border2.Visible = false;
             this.visualButton11.Image.Border = border2;
             this.visualButton11.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image1")));
-            this.visualButton11.Image.Point = new System.Drawing.Point(35, -4);
+            this.visualButton11.Image.Point = new System.Drawing.Point(50, -2);
             this.visualButton11.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton11.Image.Visible = false;
-            this.visualButton11.Location = new System.Drawing.Point(316, 347);
+            this.visualButton11.Location = new System.Drawing.Point(421, 427);
             this.visualButton11.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton11.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton11.Name = "visualButton11";
-            this.visualButton11.Size = new System.Drawing.Size(94, 16);
+            this.visualButton11.Size = new System.Drawing.Size(125, 20);
             this.visualButton11.TabIndex = 5;
             this.visualButton11.Text = "End Conversation";
             this.visualButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
@@ -360,14 +353,14 @@
             border3.Visible = false;
             this.visualButton10.Image.Border = border3;
             this.visualButton10.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image2")));
-            this.visualButton10.Image.Point = new System.Drawing.Point(35, -4);
+            this.visualButton10.Image.Point = new System.Drawing.Point(50, -2);
             this.visualButton10.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton10.Image.Visible = false;
-            this.visualButton10.Location = new System.Drawing.Point(316, 328);
+            this.visualButton10.Location = new System.Drawing.Point(421, 404);
             this.visualButton10.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton10.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton10.Name = "visualButton10";
-            this.visualButton10.Size = new System.Drawing.Size(94, 16);
+            this.visualButton10.Size = new System.Drawing.Size(125, 20);
             this.visualButton10.TabIndex = 4;
             this.visualButton10.Text = "Report";
             this.visualButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
@@ -402,14 +395,14 @@
             border4.Visible = false;
             this.visualButton9.Image.Border = border4;
             this.visualButton9.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image3")));
-            this.visualButton9.Image.Point = new System.Drawing.Point(58, -5);
+            this.visualButton9.Image.Point = new System.Drawing.Point(81, -4);
             this.visualButton9.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton9.Image.Visible = false;
-            this.visualButton9.Location = new System.Drawing.Point(152, 3);
+            this.visualButton9.Location = new System.Drawing.Point(203, 4);
             this.visualButton9.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton9.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton9.Name = "visualButton9";
-            this.visualButton9.Size = new System.Drawing.Size(140, 14);
+            this.visualButton9.Size = new System.Drawing.Size(187, 17);
             this.visualButton9.TabIndex = 3;
             this.visualButton9.Text = "Request More.....";
             this.visualButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
@@ -423,7 +416,8 @@
             this.visualLabel5.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel5.ForeColor = System.Drawing.Color.Black;
             this.visualLabel5.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualLabel5.Location = new System.Drawing.Point(126, 23);
+            this.visualLabel5.Location = new System.Drawing.Point(168, 28);
+            this.visualLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.visualLabel5.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel5.Name = "visualLabel5";
             this.visualLabel5.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -436,7 +430,7 @@
             this.visualLabel5.ShadowDirection = 315;
             this.visualLabel5.ShadowLocation = new System.Drawing.Point(0, 0);
             this.visualLabel5.ShadowOpacity = 100;
-            this.visualLabel5.Size = new System.Drawing.Size(195, 23);
+            this.visualLabel5.Size = new System.Drawing.Size(260, 28);
             this.visualLabel5.TabIndex = 2;
             this.visualLabel5.Text = "No messages with Contact Name yet!";
             this.visualLabel5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
@@ -470,14 +464,14 @@
             border5.Visible = false;
             this.visualButton8.Image.Border = border5;
             this.visualButton8.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image4")));
-            this.visualButton8.Image.Point = new System.Drawing.Point(13, -1);
+            this.visualButton8.Image.Point = new System.Drawing.Point(22, 2);
             this.visualButton8.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton8.Image.Visible = false;
-            this.visualButton8.Location = new System.Drawing.Point(358, 366);
+            this.visualButton8.Location = new System.Drawing.Point(477, 450);
             this.visualButton8.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton8.Name = "visualButton8";
-            this.visualButton8.Size = new System.Drawing.Size(51, 23);
+            this.visualButton8.Size = new System.Drawing.Size(68, 28);
             this.visualButton8.TabIndex = 1;
             this.visualButton8.Text = "Send";
             this.visualButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
@@ -517,15 +511,16 @@
             this.visualTextBox2.Image = null;
             this.visualTextBox2.ImageVisible = false;
             this.visualTextBox2.ImageWidth = 35;
-            this.visualTextBox2.Location = new System.Drawing.Point(3, 366);
+            this.visualTextBox2.Location = new System.Drawing.Point(4, 450);
+            this.visualTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.visualTextBox2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox2.Name = "visualTextBox2";
             this.visualTextBox2.PasswordChar = '\0';
             this.visualTextBox2.ReadOnly = false;
-            this.visualTextBox2.Size = new System.Drawing.Size(349, 23);
+            this.visualTextBox2.Size = new System.Drawing.Size(465, 25);
             this.visualTextBox2.TabIndex = 0;
             this.visualTextBox2.Text = "Enter Message";
-            this.visualTextBox2.TextBoxWidth = 339;
+            this.visualTextBox2.TextBoxWidth = 607;
             this.visualTextBox2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.visualTextBox2.Watermark.ActiveColor = System.Drawing.Color.Gray;
             this.visualTextBox2.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -548,19 +543,20 @@
             this.visualGroupBox2.Border.Visible = true;
             this.visualGroupBox2.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
             this.visualGroupBox2.ControlBrushCollection = null;
+            this.visualGroupBox2.Controls.Add(this.pictureBox1);
             this.visualGroupBox2.Controls.Add(this.visualButton3);
             this.visualGroupBox2.Controls.Add(this.visualButton2);
-            this.visualGroupBox2.Controls.Add(this.pictureBox2);
             this.visualGroupBox2.Controls.Add(this.visualLabel2);
             this.visualGroupBox2.ForeColor = System.Drawing.Color.Black;
             this.visualGroupBox2.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualGroupBox2.Location = new System.Drawing.Point(12, 191);
+            this.visualGroupBox2.Location = new System.Drawing.Point(16, 235);
+            this.visualGroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.visualGroupBox2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox2.Name = "visualGroupBox2";
-            this.visualGroupBox2.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
+            this.visualGroupBox2.Padding = new System.Windows.Forms.Padding(7, 32, 7, 6);
             this.visualGroupBox2.Separator = true;
             this.visualGroupBox2.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualGroupBox2.Size = new System.Drawing.Size(220, 80);
+            this.visualGroupBox2.Size = new System.Drawing.Size(293, 98);
             this.visualGroupBox2.TabIndex = 4;
             this.visualGroupBox2.Text = "Contact Name";
             this.visualGroupBox2.TextAlignment = System.Drawing.StringAlignment.Far;
@@ -597,14 +593,14 @@
             border6.Visible = false;
             this.visualButton3.Image.Border = border6;
             this.visualButton3.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image5")));
-            this.visualButton3.Image.Point = new System.Drawing.Point(52, -4);
+            this.visualButton3.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton3.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton3.Image.Visible = false;
-            this.visualButton3.Location = new System.Drawing.Point(88, 38);
+            this.visualButton3.Location = new System.Drawing.Point(117, 47);
             this.visualButton3.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton3.Name = "visualButton3";
-            this.visualButton3.Size = new System.Drawing.Size(129, 17);
+            this.visualButton3.Size = new System.Drawing.Size(172, 21);
             this.visualButton3.TabIndex = 4;
             this.visualButton3.Text = "Manage Contact";
             this.visualButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
@@ -639,29 +635,18 @@
             border7.Visible = false;
             this.visualButton2.Image.Border = border7;
             this.visualButton2.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image6")));
-            this.visualButton2.Image.Point = new System.Drawing.Point(52, -4);
+            this.visualButton2.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton2.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton2.Image.Visible = false;
-            this.visualButton2.Location = new System.Drawing.Point(88, 60);
+            this.visualButton2.Location = new System.Drawing.Point(117, 74);
             this.visualButton2.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton2.Name = "visualButton2";
-            this.visualButton2.Size = new System.Drawing.Size(129, 17);
+            this.visualButton2.Size = new System.Drawing.Size(172, 21);
             this.visualButton2.TabIndex = 3;
             this.visualButton2.Text = "Start Converstaion";
             this.visualButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.visualButton2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.pictureBox2.Image = global::Hawkchat.Client.Properties.Resources.test;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(79, 74);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
             // 
             // visualLabel2
             // 
@@ -671,7 +656,8 @@
             this.visualLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.visualLabel2.ForeColor = System.Drawing.Color.Green;
             this.visualLabel2.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualLabel2.Location = new System.Drawing.Point(176, 18);
+            this.visualLabel2.Location = new System.Drawing.Point(235, 22);
+            this.visualLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.visualLabel2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel2.Name = "visualLabel2";
             this.visualLabel2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -684,7 +670,7 @@
             this.visualLabel2.ShadowDirection = 315;
             this.visualLabel2.ShadowLocation = new System.Drawing.Point(0, 0);
             this.visualLabel2.ShadowOpacity = 100;
-            this.visualLabel2.Size = new System.Drawing.Size(40, 23);
+            this.visualLabel2.Size = new System.Drawing.Size(53, 28);
             this.visualLabel2.TabIndex = 1;
             this.visualLabel2.Text = "Online";
             this.visualLabel2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
@@ -704,19 +690,20 @@
             this.visualGroupBox3.Border.Visible = true;
             this.visualGroupBox3.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
             this.visualGroupBox3.ControlBrushCollection = null;
+            this.visualGroupBox3.Controls.Add(this.pictureBox2);
             this.visualGroupBox3.Controls.Add(this.visualButton4);
             this.visualGroupBox3.Controls.Add(this.visualButton5);
-            this.visualGroupBox3.Controls.Add(this.pictureBox3);
             this.visualGroupBox3.Controls.Add(this.visualLabel3);
             this.visualGroupBox3.ForeColor = System.Drawing.Color.Black;
             this.visualGroupBox3.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualGroupBox3.Location = new System.Drawing.Point(12, 277);
+            this.visualGroupBox3.Location = new System.Drawing.Point(16, 341);
+            this.visualGroupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.visualGroupBox3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox3.Name = "visualGroupBox3";
-            this.visualGroupBox3.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
+            this.visualGroupBox3.Padding = new System.Windows.Forms.Padding(7, 32, 7, 6);
             this.visualGroupBox3.Separator = true;
             this.visualGroupBox3.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualGroupBox3.Size = new System.Drawing.Size(220, 80);
+            this.visualGroupBox3.Size = new System.Drawing.Size(293, 98);
             this.visualGroupBox3.TabIndex = 5;
             this.visualGroupBox3.Text = "Contact Name";
             this.visualGroupBox3.TextAlignment = System.Drawing.StringAlignment.Far;
@@ -753,14 +740,14 @@
             border8.Visible = false;
             this.visualButton4.Image.Border = border8;
             this.visualButton4.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image7")));
-            this.visualButton4.Image.Point = new System.Drawing.Point(52, -4);
+            this.visualButton4.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton4.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton4.Image.Visible = false;
-            this.visualButton4.Location = new System.Drawing.Point(88, 38);
+            this.visualButton4.Location = new System.Drawing.Point(117, 47);
             this.visualButton4.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton4.Name = "visualButton4";
-            this.visualButton4.Size = new System.Drawing.Size(129, 17);
+            this.visualButton4.Size = new System.Drawing.Size(172, 21);
             this.visualButton4.TabIndex = 4;
             this.visualButton4.Text = "Manage Contact";
             this.visualButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
@@ -795,29 +782,18 @@
             border9.Visible = false;
             this.visualButton5.Image.Border = border9;
             this.visualButton5.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image8")));
-            this.visualButton5.Image.Point = new System.Drawing.Point(52, -4);
+            this.visualButton5.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton5.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton5.Image.Visible = false;
-            this.visualButton5.Location = new System.Drawing.Point(88, 60);
+            this.visualButton5.Location = new System.Drawing.Point(117, 74);
             this.visualButton5.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton5.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton5.Name = "visualButton5";
-            this.visualButton5.Size = new System.Drawing.Size(129, 17);
+            this.visualButton5.Size = new System.Drawing.Size(172, 21);
             this.visualButton5.TabIndex = 3;
             this.visualButton5.Text = "Resume Conversation";
             this.visualButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.visualButton5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.pictureBox3.Image = global::Hawkchat.Client.Properties.Resources.test;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(79, 74);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
             // 
             // visualLabel3
             // 
@@ -827,7 +803,8 @@
             this.visualLabel3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.visualLabel3.ForeColor = System.Drawing.Color.Gold;
             this.visualLabel3.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualLabel3.Location = new System.Drawing.Point(184, 19);
+            this.visualLabel3.Location = new System.Drawing.Point(245, 23);
+            this.visualLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.visualLabel3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel3.Name = "visualLabel3";
             this.visualLabel3.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -840,7 +817,7 @@
             this.visualLabel3.ShadowDirection = 315;
             this.visualLabel3.ShadowLocation = new System.Drawing.Point(0, 0);
             this.visualLabel3.ShadowOpacity = 100;
-            this.visualLabel3.Size = new System.Drawing.Size(33, 23);
+            this.visualLabel3.Size = new System.Drawing.Size(44, 28);
             this.visualLabel3.TabIndex = 1;
             this.visualLabel3.Text = "Away";
             this.visualLabel3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
@@ -860,19 +837,20 @@
             this.visualGroupBox4.Border.Visible = true;
             this.visualGroupBox4.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
             this.visualGroupBox4.ControlBrushCollection = null;
+            this.visualGroupBox4.Controls.Add(this.pictureBox3);
             this.visualGroupBox4.Controls.Add(this.visualButton6);
             this.visualGroupBox4.Controls.Add(this.visualButton7);
-            this.visualGroupBox4.Controls.Add(this.pictureBox4);
             this.visualGroupBox4.Controls.Add(this.visualLabel4);
             this.visualGroupBox4.ForeColor = System.Drawing.Color.Black;
             this.visualGroupBox4.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualGroupBox4.Location = new System.Drawing.Point(12, 367);
+            this.visualGroupBox4.Location = new System.Drawing.Point(16, 452);
+            this.visualGroupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.visualGroupBox4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox4.Name = "visualGroupBox4";
-            this.visualGroupBox4.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
+            this.visualGroupBox4.Padding = new System.Windows.Forms.Padding(7, 32, 7, 6);
             this.visualGroupBox4.Separator = true;
             this.visualGroupBox4.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualGroupBox4.Size = new System.Drawing.Size(220, 80);
+            this.visualGroupBox4.Size = new System.Drawing.Size(293, 98);
             this.visualGroupBox4.TabIndex = 6;
             this.visualGroupBox4.Text = "Contact Name";
             this.visualGroupBox4.TextAlignment = System.Drawing.StringAlignment.Far;
@@ -909,14 +887,14 @@
             border10.Visible = false;
             this.visualButton6.Image.Border = border10;
             this.visualButton6.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image9")));
-            this.visualButton6.Image.Point = new System.Drawing.Point(52, -4);
+            this.visualButton6.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton6.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton6.Image.Visible = false;
-            this.visualButton6.Location = new System.Drawing.Point(88, 38);
+            this.visualButton6.Location = new System.Drawing.Point(117, 47);
             this.visualButton6.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton6.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton6.Name = "visualButton6";
-            this.visualButton6.Size = new System.Drawing.Size(129, 17);
+            this.visualButton6.Size = new System.Drawing.Size(172, 21);
             this.visualButton6.TabIndex = 4;
             this.visualButton6.Text = "Report User";
             this.visualButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
@@ -951,29 +929,18 @@
             border11.Visible = false;
             this.visualButton7.Image.Border = border11;
             this.visualButton7.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image10")));
-            this.visualButton7.Image.Point = new System.Drawing.Point(52, -4);
+            this.visualButton7.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton7.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton7.Image.Visible = false;
-            this.visualButton7.Location = new System.Drawing.Point(88, 60);
+            this.visualButton7.Location = new System.Drawing.Point(117, 74);
             this.visualButton7.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton7.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton7.Name = "visualButton7";
-            this.visualButton7.Size = new System.Drawing.Size(129, 17);
+            this.visualButton7.Size = new System.Drawing.Size(172, 21);
             this.visualButton7.TabIndex = 3;
             this.visualButton7.Text = "Manage Contact";
             this.visualButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.visualButton7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.pictureBox4.Image = global::Hawkchat.Client.Properties.Resources.test;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(79, 74);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
             // 
             // visualLabel4
             // 
@@ -983,7 +950,8 @@
             this.visualLabel4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.visualLabel4.ForeColor = System.Drawing.Color.Orange;
             this.visualLabel4.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualLabel4.Location = new System.Drawing.Point(187, 19);
+            this.visualLabel4.Location = new System.Drawing.Point(249, 23);
+            this.visualLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.visualLabel4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel4.Name = "visualLabel4";
             this.visualLabel4.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -996,7 +964,7 @@
             this.visualLabel4.ShadowDirection = 315;
             this.visualLabel4.ShadowLocation = new System.Drawing.Point(0, 0);
             this.visualLabel4.ShadowOpacity = 100;
-            this.visualLabel4.Size = new System.Drawing.Size(30, 23);
+            this.visualLabel4.Size = new System.Drawing.Size(40, 28);
             this.visualLabel4.TabIndex = 1;
             this.visualLabel4.Text = "Busy";
             this.visualLabel4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
@@ -1030,14 +998,15 @@
             "Alphabetical Z-A",
             "Online First",
             "Offline First"});
-            this.visualComboBox1.Location = new System.Drawing.Point(12, 162);
+            this.visualComboBox1.Location = new System.Drawing.Point(16, 199);
+            this.visualComboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.visualComboBox1.MenuItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.visualComboBox1.MenuItemNormal = System.Drawing.Color.White;
             this.visualComboBox1.MenuTextColor = System.Drawing.Color.Black;
             this.visualComboBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualComboBox1.Name = "visualComboBox1";
             this.visualComboBox1.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(222)))), ((int)(((byte)(220)))));
-            this.visualComboBox1.Size = new System.Drawing.Size(221, 26);
+            this.visualComboBox1.Size = new System.Drawing.Size(293, 26);
             this.visualComboBox1.StartIndex = 0;
             this.visualComboBox1.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualComboBox1.TabIndex = 7;
@@ -1064,11 +1033,13 @@
             this.visualContextMenuStrip1.Border.Type = VisualPlus.Enumerators.ShapeType.Rectangle;
             this.visualContextMenuStrip1.Border.Visible = true;
             this.visualContextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.visualContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.contactsToolStripMenuItem});
             this.visualContextMenuStrip1.MenuFont = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualContextMenuStrip1.Name = "visualContextMenuStrip1";
-            this.visualContextMenuStrip1.Size = new System.Drawing.Size(120, 26);
+            this.visualContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.visualContextMenuStrip1.Size = new System.Drawing.Size(133, 28);
             this.visualContextMenuStrip1.TextDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             // 
             // contactsToolStripMenuItem
@@ -1076,7 +1047,7 @@
             this.contactsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.blockedUsersToolStripMenuItem});
             this.contactsToolStripMenuItem.Name = "contactsToolStripMenuItem";
-            this.contactsToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.contactsToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.contactsToolStripMenuItem.Text = "Contacts";
             // 
             // blockedUsersToolStripMenuItem
@@ -1087,7 +1058,7 @@
             this.contactNameToolStripMenuItem2,
             this.contactNameToolStripMenuItem3});
             this.blockedUsersToolStripMenuItem.Name = "blockedUsersToolStripMenuItem";
-            this.blockedUsersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.blockedUsersToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.blockedUsersToolStripMenuItem.Text = "Blocked Users";
             // 
             // contactNameToolStripMenuItem
@@ -1095,13 +1066,13 @@
             this.contactNameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.unblockToolStripMenuItem});
             this.contactNameToolStripMenuItem.Name = "contactNameToolStripMenuItem";
-            this.contactNameToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.contactNameToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.contactNameToolStripMenuItem.Text = "Contact Name";
             // 
             // unblockToolStripMenuItem
             // 
             this.unblockToolStripMenuItem.Name = "unblockToolStripMenuItem";
-            this.unblockToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.unblockToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
             this.unblockToolStripMenuItem.Text = "Unblock";
             // 
             // contactNameToolStripMenuItem1
@@ -1109,13 +1080,13 @@
             this.contactNameToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.unblockToolStripMenuItem1});
             this.contactNameToolStripMenuItem1.Name = "contactNameToolStripMenuItem1";
-            this.contactNameToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
+            this.contactNameToolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
             this.contactNameToolStripMenuItem1.Text = "Contact Name";
             // 
             // unblockToolStripMenuItem1
             // 
             this.unblockToolStripMenuItem1.Name = "unblockToolStripMenuItem1";
-            this.unblockToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
+            this.unblockToolStripMenuItem1.Size = new System.Drawing.Size(134, 26);
             this.unblockToolStripMenuItem1.Text = "Unblock";
             // 
             // contactNameToolStripMenuItem2
@@ -1123,13 +1094,13 @@
             this.contactNameToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.unblockToolStripMenuItem2});
             this.contactNameToolStripMenuItem2.Name = "contactNameToolStripMenuItem2";
-            this.contactNameToolStripMenuItem2.Size = new System.Drawing.Size(146, 22);
+            this.contactNameToolStripMenuItem2.Size = new System.Drawing.Size(172, 26);
             this.contactNameToolStripMenuItem2.Text = "Contact Name";
             // 
             // unblockToolStripMenuItem2
             // 
             this.unblockToolStripMenuItem2.Name = "unblockToolStripMenuItem2";
-            this.unblockToolStripMenuItem2.Size = new System.Drawing.Size(117, 22);
+            this.unblockToolStripMenuItem2.Size = new System.Drawing.Size(134, 26);
             this.unblockToolStripMenuItem2.Text = "Unblock";
             // 
             // contactNameToolStripMenuItem3
@@ -1137,18 +1108,66 @@
             this.contactNameToolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.unblockToolStripMenuItem3});
             this.contactNameToolStripMenuItem3.Name = "contactNameToolStripMenuItem3";
-            this.contactNameToolStripMenuItem3.Size = new System.Drawing.Size(146, 22);
+            this.contactNameToolStripMenuItem3.Size = new System.Drawing.Size(172, 26);
             this.contactNameToolStripMenuItem3.Text = "Contact Name";
             // 
             // unblockToolStripMenuItem3
             // 
             this.unblockToolStripMenuItem3.Name = "unblockToolStripMenuItem3";
-            this.unblockToolStripMenuItem3.Size = new System.Drawing.Size(117, 22);
+            this.unblockToolStripMenuItem3.Size = new System.Drawing.Size(134, 26);
             this.unblockToolStripMenuItem3.Text = "Unblock";
+            // 
+            // userProfilePicture
+            // 
+            this.userProfilePicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.userProfilePicture.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
+            this.userProfilePicture.Location = new System.Drawing.Point(4, 3);
+            this.userProfilePicture.Margin = new System.Windows.Forms.Padding(4);
+            this.userProfilePicture.Name = "userProfilePicture";
+            this.userProfilePicture.Size = new System.Drawing.Size(105, 91);
+            this.userProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userProfilePicture.TabIndex = 5;
+            this.userProfilePicture.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.pictureBox1.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(105, 91);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.pictureBox2.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(105, 91);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.pictureBox3.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(105, 91);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
@@ -1157,14 +1176,14 @@
             this.Border.Thickness = 3;
             this.Border.Type = VisualPlus.Enumerators.ShapeType.Rectangle;
             this.Border.Visible = true;
-            this.ClientSize = new System.Drawing.Size(662, 456);
+            this.ClientSize = new System.Drawing.Size(883, 561);
             this.Controls.Add(this.visualComboBox1);
             this.Controls.Add(this.visualGroupBox4);
             this.Controls.Add(this.visualGroupBox3);
             this.Controls.Add(this.visualGroupBox2);
             this.Controls.Add(this.visualPanel1);
             this.Controls.Add(this.visualTextBox1);
-            this.Controls.Add(this.visualGroupBox1);
+            this.Controls.Add(this.groupBoxUserInfo);
             border12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             border12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
             border12.HoverVisible = false;
@@ -1177,20 +1196,22 @@
             this.Image.Point = new System.Drawing.Point(5, 7);
             this.Image.Size = new System.Drawing.Size(16, 16);
             this.Image.Visible = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainWindow";
             this.Text = "Hawk Chat - Contact Name";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
-            this.visualGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.MainWindow_Load);
+            this.groupBoxUserInfo.ResumeLayout(false);
             this.visualPanel1.ResumeLayout(false);
             this.visualPanel1.PerformLayout();
             this.visualGroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.visualGroupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.visualGroupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.visualContextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1198,16 +1219,14 @@
 
         #endregion
 
-        private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel1;
+        private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox groupBoxUserInfo;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel lblLoggedInUserStatus;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton1;
         private VisualPlus.Toolkit.Controls.Editors.VisualTextBox visualTextBox1;
         private VisualPlus.Toolkit.Controls.Layout.VisualPanel visualPanel1;
         private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox2;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton3;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel2;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton9;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel5;
@@ -1216,12 +1235,10 @@
         private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox3;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton4;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton5;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel3;
         private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox4;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton6;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton7;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel4;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox visualComboBox1;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton11;
@@ -1237,5 +1254,9 @@
         private System.Windows.Forms.ToolStripMenuItem unblockToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem contactNameToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem unblockToolStripMenuItem3;
+        private System.Windows.Forms.PictureBox userProfilePicture;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

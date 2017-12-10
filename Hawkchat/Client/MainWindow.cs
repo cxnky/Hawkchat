@@ -24,5 +24,26 @@ namespace Hawkchat.Client
             Environment.Exit(0);
 
         }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+
+            // Set the user's username and avatar URL
+            userProfilePicture.ImageLocation = LoginWindow.AVATAR_URL;
+            groupBoxUserInfo.Text = LoginWindow.USERNAME;
+            lblLoggedInUserStatus.Text = "Online";
+            lblLoggedInUserStatus.ForeColor = Color.Green;
+            this.Text = "Hawk Chat";
+
+            this.Update();
+
+        }
+
+        private void visualButton1_Click(object sender, EventArgs e)
+        {
+            
+
+
+        }
     }
 }

@@ -63,9 +63,9 @@ namespace Hawkchat.Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap test {
+        internal static System.Drawing.Bitmap DefaultAvatar {
             get {
-                object obj = ResourceManager.GetObject("test", resourceCulture);
+                object obj = ResourceManager.GetObject("DefaultAvatar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

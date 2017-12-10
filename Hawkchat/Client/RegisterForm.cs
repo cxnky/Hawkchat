@@ -77,8 +77,6 @@ namespace Hawkchat.Client
                 txtUsernameTaken.ForeColor = Color.Green;
 
                 txtUsernameTaken.Visible = true;
-                await Task.Delay(5000);
-                txtUsernameTaken.Visible = false;
 
             }
 
@@ -96,8 +94,12 @@ namespace Hawkchat.Client
 
             LoginWindow.ACCOUNTID = long.Parse(jObject["AccountID"].ToString());
             LoginWindow.USERNAME = jObject["username"].ToString();
+            LoginWindow.AVATAR_URL = jObject["avatarURL"].ToString();
 
-            MessageBox.Show("Show the main program UI here...");
+            MainWindow mainWindow = new MainWindow();
+
+            mainWindow.Show();
+            this.Hide();
 
         }
     }

@@ -15,10 +15,12 @@ namespace Hawkchat.Server.Models
         public string IP { get; set; }
 
         public int Port { get; set; }
-        
+
         public string Username { get; set; }
 
+        //public string AvatarURL { get; set; }
+
         public Int64 UserID { get; set; }
-        
+
     }
 }
