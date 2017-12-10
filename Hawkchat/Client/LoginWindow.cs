@@ -47,12 +47,12 @@ namespace Hawkchat.Client
 
             }
         }
-        
+
         public static SimpleTcpClient client;
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+
             dynamic authJson = new JObject();
 
             authJson.command = "AUTH";
@@ -80,31 +80,37 @@ namespace Hawkchat.Client
                 btnLogin.Enabled = false;
 #endif
 
-                authJson = new JObject();
+                //authJson = new JObject();
 
-                authJson.command = "REPORT";
-                authJson.reporterid = ACCOUNTID.ToString();
+                //authJson.command = "REPORT";
+                //authJson.reporterid = ACCOUNTID.ToString();
 
-                authJson.reportedid = "123456789";
-                authJson.category = "SPAM";
+                //authJson.reportedid = "123456789";
+                //authJson.category = "SPAM";
 
-                var helpfulMessages = new List<ReportMessage>();
+                //var helpfulMessages = new List<ReportMessage>();
 
-                helpfulMessages.Add(new ReportMessage { Message = "This is a test2", Sender = "0987654321", Timestamp = "1512928834" });
-                helpfulMessages.Add(new ReportMessage { Message = "This is a test", Sender = "123456789", Timestamp = "1512928821" });
+                //helpfulMessages.Add(new ReportMessage { Message = "This is a test2", Sender = "0987654321", Timestamp = "1512928834" });
+                //helpfulMessages.Add(new ReportMessage { Message = "This is a test", Sender = "123456789", Timestamp = "1512928821" });
 
-                string msgs = JsonConvert.SerializeObject(helpfulMessages);
-                JArray jArray = JArray.Parse(msgs);
+                //string msgs = JsonConvert.SerializeObject(helpfulMessages);
+                //JArray jArray = JArray.Parse(msgs);
 
-                Console.WriteLine(jArray.ToString());
+                //Console.WriteLine(jArray.ToString());
 
-                authJson.messages = jArray;
-                
-                client.WriteLine(authJson.ToString(Formatting.None));
+                //authJson.messages = jArray;
 
-                MessageBox.Show("Your report about this user has been sent. You will receive information once this matter has been resolved.", "Hawkchat", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //client.WriteLine(authJson.ToString(Formatting.None));
 
-            } else
+                //MessageBox.Show("Your report about this user has been sent. You will receive information once this matter has been resolved.", "Hawkchat", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MainWindow mainWindow = new MainWindow();
+
+                mainWindow.Show();
+                this.Hide();
+
+            }
+            else
             {
 
                 string reason = returnedJson["reason"].ToString();
@@ -125,7 +131,7 @@ namespace Hawkchat.Client
 
                         bannedWindow.Show();
                         this.Hide();
-                        
+
                         break;
 
                     case "CREDENTIALS":
@@ -158,7 +164,7 @@ namespace Hawkchat.Client
         {
 
             RegisterForm registerForm = new RegisterForm();
-            
+
             registerForm.ShowDialog();
 
         }

@@ -102,7 +102,7 @@ namespace Hawkchat.Server
 
         private void Server_ClientConnected(object sender, System.Net.Sockets.TcpClient e)
         {
-            
+             
         }
     }
 }

@@ -47,7 +47,7 @@
       <HintPath>..\packages\SimpleTCP.1.0.24\lib\net45\SimpleTCP.dll</HintPath>
     </Reference>
     <Reference Include="SUF">
-      <HintPath>..\..\..\..\..\Source\Repos\BUF\BUF\bin\Debug\SUF.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\SUF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
