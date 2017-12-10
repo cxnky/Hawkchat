@@ -47,7 +47,7 @@
       <HintPath>..\packages\SimpleTCP.1.0.24\lib\net45\SimpleTCP.dll</HintPath>
     </Reference>
     <Reference Include="SUF">
-      <HintPath>..\..\..\..\..\..\Documents\BUF\BUF\bin\Release\SUF.dll</HintPath>
+      <HintPath>..\..\..\..\..\Source\Repos\BUF\BUF\bin\Debug\SUF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -70,6 +70,7 @@
     <Compile Include="enums\ConnectionStatus.cs" />
     <Compile Include="enums\Status.cs" />
     <Compile Include="models\ClientModel.cs" />
+    <Compile Include="models\UserBan.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

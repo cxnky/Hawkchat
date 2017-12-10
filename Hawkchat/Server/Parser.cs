@@ -1,4 +1,5 @@
-﻿using Hawkchat.Server.utils;
+﻿using Hawkchat.Server.models;
+using Hawkchat.Server.utils;
 using Hawkchat.Server.Utils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -25,7 +26,8 @@ namespace Hawkchat.Server
 
                     string username = json["username"].ToString();
                     string password = json["password"].ToString();
-                    
+
+                    // check to see if the user is banned
                     string query = $"SELECT * FROM users WHERE username='{username}' AND password='{password}'";
 
                     SQLiteDataReader reader = DBUtils.ExecuteReader(connection, query);
@@ -39,6 +41,11 @@ namespace Hawkchat.Server
                     {
 
                         jsonResponse.authenticated = false;
+                        jsonResponse.reason = "CREDENTIALS";
+
+                        DBUtils.CloseConnection(connection);
+
+                        message.Reply(jsonResponse.ToString(Formatting.None));
 
                     }
 
@@ -54,6 +61,30 @@ namespace Hawkchat.Server
                     reader.Close();
 
                     jsonResponse.accountID = UserID;
+
+                    string banQuery = $"SELECT * FROM bans WHERE accountid='{UserID}'";
+
+                    SQLiteDataReader banReader = DBUtils.ExecuteReader(connection, banQuery);
+
+                    if (banReader.HasRows)
+                    {
+
+                        // user is banned
+                        jsonResponse.authenticated = false;
+                        jsonResponse.reason = "BANNED";
+
+                    }
+
+                    while (banReader.Read())
+                    {
+
+                        jsonResponse.BanID = banReader["id"].ToString();
+                        jsonResponse.AccountID = banReader["accountid"].ToString();
+                        jsonResponse.Reason = banReader["reason"].ToString();
+                        jsonResponse.expires = banReader["expires"].ToString();
+                        jsonResponse.Appealable = banReader["appealable"].ToString();
+
+                    }
 
                     DBUtils.CloseConnection(connection);
 

@@ -24,8 +24,6 @@ namespace Hawkchat.Client
             Application.SetCompatibleTextRenderingDefault(false);
 
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-
-            throw new InvalidOperationException("test");
             
             Application.Run(new LoginWindow());
 

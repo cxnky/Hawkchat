@@ -32,7 +32,7 @@ namespace Hawkchat.Client
 #if DEBUG
                 client = new SimpleTcpClient().Connect("127.0.0.1", 3289);
 #else
-               client = new SimpleTcpClient().Connect("81.109.173.49", 3289);
+               client = new SimpleTcpClient().Connect("server ip", 3289);
 #endif
 
 
@@ -77,7 +77,33 @@ namespace Hawkchat.Client
             } else
             {
 
-                MessageBox.Show("Invalid credentials.", "Hawkchat", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string reason = returnedJson["reason"].ToString();
+
+                switch (reason)
+                {
+
+                    case "BANNED":
+                        string BanID = returnedJson["BanID"].ToString();
+                        string AccountID = returnedJson["AccountID"].ToString();
+                        string Reason = returnedJson["Reason"].ToString();
+                        string Expires = returnedJson["expires"].ToString();
+                        bool Appealable = bool.Parse(returnedJson["Appealable"].ToString());
+
+                        BannedWindow bannedWindow = new BannedWindow();
+
+                        bannedWindow.SetBanInformation(BanID, AccountID, Reason, Expires, Appealable);
+
+                        bannedWindow.Show();
+                        this.Hide();
+                        
+                        break;
+
+                    case "CREDENTIALS":
+                        MessageBox.Show("Invalid credentials.", "Hawkchat", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+
+                }
+
                 return;
 
             }
@@ -93,8 +119,6 @@ namespace Hawkchat.Client
                 disconnectJson.command = "DISCONNECT";
 
                 client.WriteLine(disconnectJson.ToString(Formatting.None));
-
-
 
             }
 
