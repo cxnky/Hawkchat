@@ -84,10 +84,10 @@
     <Compile Include="admin\AdminTools.Designer.cs">
       <DependentUpon>AdminTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="BannedWindow.cs">
+    <Compile Include="dialogs\BannedWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BannedWindow.Designer.cs">
+    <Compile Include="dialogs\BannedWindow.Designer.cs">
       <DependentUpon>BannedWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginWindow.cs">
@@ -111,10 +111,10 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserSettings.cs">
+    <Compile Include="dialogs\UserSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserSettings.Designer.cs">
+    <Compile Include="dialogs\UserSettings.Designer.cs">
       <DependentUpon>UserSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="utils\Constants.cs" />
@@ -122,7 +122,7 @@
     <EmbeddedResource Include="admin\AdminTools.resx">
       <DependentUpon>AdminTools.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BannedWindow.resx">
+    <EmbeddedResource Include="dialogs\BannedWindow.resx">
       <DependentUpon>BannedWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginWindow.resx">
@@ -144,7 +144,7 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserSettings.resx">
+    <EmbeddedResource Include="dialogs\UserSettings.resx">
       <DependentUpon>UserSettings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
