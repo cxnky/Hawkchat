@@ -313,6 +313,7 @@
             this.MinimumSize = new System.Drawing.Size(410, 214);
             this.Name = "LoginWindow";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Hawkchat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginWindow_FormClosing);
             this.ResumeLayout(false);

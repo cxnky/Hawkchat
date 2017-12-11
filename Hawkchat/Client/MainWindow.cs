@@ -1,6 +1,8 @@
 ﻿using AutoUpdaterDotNET;
 using Hawkchat.Client.admin;
 using Hawkchat.Client.utils;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +52,14 @@ namespace Hawkchat.Client
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
 
+            dynamic disconnectJson = new JObject();
+
+            disconnectJson.command = "DISCONNECT";
+
+            LoginWindow.client.WriteLine(disconnectJson.ToString(Formatting.None));
+
+            LoginWindow.client.Disconnect();
+           
             Environment.Exit(0);
 
         }

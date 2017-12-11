@@ -206,6 +206,8 @@ namespace Hawkchat.Client
 
                 client.WriteLine(disconnectJson.ToString(Formatting.None));
 
+                client.Disconnect();
+
             }
 
         }
