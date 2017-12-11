@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             VisualPlus.Structure.Border border2 = new VisualPlus.Structure.Border();
             VisualPlus.Structure.Border border3 = new VisualPlus.Structure.Border();
             VisualPlus.Structure.Border border4 = new VisualPlus.Structure.Border();
@@ -42,54 +40,46 @@
             VisualPlus.Structure.Border border10 = new VisualPlus.Structure.Border();
             VisualPlus.Structure.Border border11 = new VisualPlus.Structure.Border();
             VisualPlus.Structure.Border border12 = new VisualPlus.Structure.Border();
+            VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
+            VisualPlus.Structure.Border border13 = new VisualPlus.Structure.Border();
             this.groupBoxUserInfo = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
+            this.userProfilePicture = new System.Windows.Forms.PictureBox();
             this.visualButton1 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.lblLoggedInUserStatus = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox1 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
             this.visualPanel1 = new VisualPlus.Toolkit.Controls.Layout.VisualPanel();
-            this.visualButton11 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-            this.visualButton10 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-            this.visualButton9 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-            this.visualLabel5 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualButton8 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-            this.visualTextBox2 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.btnEndConversation = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+            this.btnReportUser = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+            this.btnRequestMore = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+            this.lblNoMessages = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.btnSendMessage = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+            this.txtMessage = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
             this.visualGroupBox2 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.visualButton3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualButton2 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualLabel2 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualGroupBox3 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.visualButton4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualButton5 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualLabel3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualGroupBox4 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.visualButton6 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualButton7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualLabel4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualComboBox1 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
-            this.visualContextMenuStrip1 = new VisualPlus.Toolkit.Controls.Navigation.VisualContextMenuStrip();
-            this.contactsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.blockedUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unblockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactNameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.unblockToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactNameToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.unblockToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactNameToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.unblockToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.userProfilePicture = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnPerformModeration = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.groupBoxUserInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfilePicture)).BeginInit();
             this.visualPanel1.SuspendLayout();
             this.visualGroupBox2.SuspendLayout();
-            this.visualGroupBox3.SuspendLayout();
-            this.visualGroupBox4.SuspendLayout();
-            this.visualContextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.visualGroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.visualGroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,12 +98,13 @@
             this.groupBoxUserInfo.Border.Visible = true;
             this.groupBoxUserInfo.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
             this.groupBoxUserInfo.ControlBrushCollection = null;
+            this.groupBoxUserInfo.Controls.Add(this.btnPerformModeration);
             this.groupBoxUserInfo.Controls.Add(this.userProfilePicture);
             this.groupBoxUserInfo.Controls.Add(this.visualButton1);
             this.groupBoxUserInfo.Controls.Add(this.lblLoggedInUserStatus);
             this.groupBoxUserInfo.ForeColor = System.Drawing.Color.Black;
             this.groupBoxUserInfo.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.groupBoxUserInfo.Location = new System.Drawing.Point(16, 68);
+            this.groupBoxUserInfo.Location = new System.Drawing.Point(16, 45);
             this.groupBoxUserInfo.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxUserInfo.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.groupBoxUserInfo.Name = "groupBoxUserInfo";
@@ -127,6 +118,18 @@
             this.groupBoxUserInfo.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.groupBoxUserInfo.TitleAlignment = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.TitleAlignments.Top;
             this.groupBoxUserInfo.TitleBoxHeight = 25;
+            // 
+            // userProfilePicture
+            // 
+            this.userProfilePicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.userProfilePicture.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
+            this.userProfilePicture.Location = new System.Drawing.Point(4, 4);
+            this.userProfilePicture.Margin = new System.Windows.Forms.Padding(4);
+            this.userProfilePicture.Name = "userProfilePicture";
+            this.userProfilePicture.Size = new System.Drawing.Size(105, 91);
+            this.userProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userProfilePicture.TabIndex = 5;
+            this.userProfilePicture.TabStop = false;
             // 
             // visualButton1
             // 
@@ -148,19 +151,19 @@
             this.visualButton1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualButton1.ForeColor = System.Drawing.Color.Black;
             this.visualButton1.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            border1.HoverVisible = false;
-            border1.Rounding = 6;
-            border1.Thickness = 1;
-            border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            border1.Visible = false;
-            this.visualButton1.Image.Border = border1;
-            this.visualButton1.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
+            border2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            border2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            border2.HoverVisible = false;
+            border2.Rounding = 6;
+            border2.Thickness = 1;
+            border2.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            border2.Visible = false;
+            this.visualButton1.Image.Border = border2;
+            this.visualButton1.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image1")));
             this.visualButton1.Image.Point = new System.Drawing.Point(74, 5);
             this.visualButton1.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton1.Image.Visible = false;
-            this.visualButton1.Location = new System.Drawing.Point(117, 60);
+            this.visualButton1.Location = new System.Drawing.Point(117, 57);
             this.visualButton1.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton1.Name = "visualButton1";
@@ -179,7 +182,7 @@
             this.lblLoggedInUserStatus.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoggedInUserStatus.ForeColor = System.Drawing.Color.Red;
             this.lblLoggedInUserStatus.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.lblLoggedInUserStatus.Location = new System.Drawing.Point(232, 23);
+            this.lblLoggedInUserStatus.Location = new System.Drawing.Point(233, 22);
             this.lblLoggedInUserStatus.Margin = new System.Windows.Forms.Padding(4);
             this.lblLoggedInUserStatus.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.lblLoggedInUserStatus.Name = "lblLoggedInUserStatus";
@@ -193,7 +196,7 @@
             this.lblLoggedInUserStatus.ShadowDirection = 315;
             this.lblLoggedInUserStatus.ShadowLocation = new System.Drawing.Point(0, 0);
             this.lblLoggedInUserStatus.ShadowOpacity = 100;
-            this.lblLoggedInUserStatus.Size = new System.Drawing.Size(57, 28);
+            this.lblLoggedInUserStatus.Size = new System.Drawing.Size(57, 16);
             this.lblLoggedInUserStatus.TabIndex = 1;
             this.lblLoggedInUserStatus.Text = "Offline";
             this.lblLoggedInUserStatus.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
@@ -232,7 +235,7 @@
             this.visualTextBox1.Image = null;
             this.visualTextBox1.ImageVisible = false;
             this.visualTextBox1.ImageWidth = 35;
-            this.visualTextBox1.Location = new System.Drawing.Point(17, 167);
+            this.visualTextBox1.Location = new System.Drawing.Point(17, 144);
             this.visualTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.visualTextBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox1.Name = "visualTextBox1";
@@ -264,15 +267,15 @@
             this.visualPanel1.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
             this.visualPanel1.Border.Visible = true;
             this.visualPanel1.ControlBrushCollection = null;
-            this.visualPanel1.Controls.Add(this.visualButton11);
-            this.visualPanel1.Controls.Add(this.visualButton10);
-            this.visualPanel1.Controls.Add(this.visualButton9);
-            this.visualPanel1.Controls.Add(this.visualLabel5);
-            this.visualPanel1.Controls.Add(this.visualButton8);
-            this.visualPanel1.Controls.Add(this.visualTextBox2);
+            this.visualPanel1.Controls.Add(this.btnEndConversation);
+            this.visualPanel1.Controls.Add(this.btnReportUser);
+            this.visualPanel1.Controls.Add(this.btnRequestMore);
+            this.visualPanel1.Controls.Add(this.lblNoMessages);
+            this.visualPanel1.Controls.Add(this.btnSendMessage);
+            this.visualPanel1.Controls.Add(this.txtMessage);
             this.visualPanel1.ForeColor = System.Drawing.Color.Black;
             this.visualPanel1.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualPanel1.Location = new System.Drawing.Point(317, 68);
+            this.visualPanel1.Location = new System.Drawing.Point(317, 45);
             this.visualPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.visualPanel1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualPanel1.Name = "visualPanel1";
@@ -281,69 +284,28 @@
             this.visualPanel1.TabIndex = 2;
             this.visualPanel1.Text = "visualPanel1";
             this.visualPanel1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualPanel1.Visible = false;
             // 
-            // visualButton11
+            // btnEndConversation
             // 
-            this.visualButton11.Animation = true;
-            this.visualButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualButton11.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.visualButton11.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualButton11.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.visualButton11.BackColorState.Pressed = System.Drawing.Color.Silver;
-            this.visualButton11.BackgroundStateGradientBrush = null;
-            this.visualButton11.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.visualButton11.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualButton11.Border.HoverVisible = true;
-            this.visualButton11.Border.Rounding = 6;
-            this.visualButton11.Border.Thickness = 1;
-            this.visualButton11.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualButton11.Border.Visible = true;
-            this.visualButton11.ControlBrushCollection = null;
-            this.visualButton11.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualButton11.ForeColor = System.Drawing.Color.Black;
-            this.visualButton11.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            border2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            border2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            border2.HoverVisible = false;
-            border2.Rounding = 6;
-            border2.Thickness = 1;
-            border2.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            border2.Visible = false;
-            this.visualButton11.Image.Border = border2;
-            this.visualButton11.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image1")));
-            this.visualButton11.Image.Point = new System.Drawing.Point(50, -2);
-            this.visualButton11.Image.Size = new System.Drawing.Size(24, 24);
-            this.visualButton11.Image.Visible = false;
-            this.visualButton11.Location = new System.Drawing.Point(421, 427);
-            this.visualButton11.Margin = new System.Windows.Forms.Padding(0);
-            this.visualButton11.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualButton11.Name = "visualButton11";
-            this.visualButton11.Size = new System.Drawing.Size(125, 20);
-            this.visualButton11.TabIndex = 5;
-            this.visualButton11.Text = "End Conversation";
-            this.visualButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.visualButton11.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // visualButton10
-            // 
-            this.visualButton10.Animation = true;
-            this.visualButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualButton10.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.visualButton10.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualButton10.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.visualButton10.BackColorState.Pressed = System.Drawing.Color.Silver;
-            this.visualButton10.BackgroundStateGradientBrush = null;
-            this.visualButton10.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.visualButton10.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualButton10.Border.HoverVisible = true;
-            this.visualButton10.Border.Rounding = 6;
-            this.visualButton10.Border.Thickness = 1;
-            this.visualButton10.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualButton10.Border.Visible = true;
-            this.visualButton10.ControlBrushCollection = null;
-            this.visualButton10.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualButton10.ForeColor = System.Drawing.Color.Black;
-            this.visualButton10.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.btnEndConversation.Animation = true;
+            this.btnEndConversation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnEndConversation.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEndConversation.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnEndConversation.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEndConversation.BackColorState.Pressed = System.Drawing.Color.Silver;
+            this.btnEndConversation.BackgroundStateGradientBrush = null;
+            this.btnEndConversation.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnEndConversation.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.btnEndConversation.Border.HoverVisible = true;
+            this.btnEndConversation.Border.Rounding = 6;
+            this.btnEndConversation.Border.Thickness = 1;
+            this.btnEndConversation.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.btnEndConversation.Border.Visible = true;
+            this.btnEndConversation.ControlBrushCollection = null;
+            this.btnEndConversation.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnEndConversation.ForeColor = System.Drawing.Color.Black;
+            this.btnEndConversation.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             border3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             border3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
             border3.HoverVisible = false;
@@ -351,41 +313,42 @@
             border3.Thickness = 1;
             border3.Type = VisualPlus.Enumerators.ShapeType.Rounded;
             border3.Visible = false;
-            this.visualButton10.Image.Border = border3;
-            this.visualButton10.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image2")));
-            this.visualButton10.Image.Point = new System.Drawing.Point(50, -2);
-            this.visualButton10.Image.Size = new System.Drawing.Size(24, 24);
-            this.visualButton10.Image.Visible = false;
-            this.visualButton10.Location = new System.Drawing.Point(421, 404);
-            this.visualButton10.Margin = new System.Windows.Forms.Padding(0);
-            this.visualButton10.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualButton10.Name = "visualButton10";
-            this.visualButton10.Size = new System.Drawing.Size(125, 20);
-            this.visualButton10.TabIndex = 4;
-            this.visualButton10.Text = "Report";
-            this.visualButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.visualButton10.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.btnEndConversation.Image.Border = border3;
+            this.btnEndConversation.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image2")));
+            this.btnEndConversation.Image.Point = new System.Drawing.Point(50, -2);
+            this.btnEndConversation.Image.Size = new System.Drawing.Size(24, 24);
+            this.btnEndConversation.Image.Visible = false;
+            this.btnEndConversation.Location = new System.Drawing.Point(421, 424);
+            this.btnEndConversation.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEndConversation.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.btnEndConversation.Name = "btnEndConversation";
+            this.btnEndConversation.Size = new System.Drawing.Size(125, 20);
+            this.btnEndConversation.TabIndex = 5;
+            this.btnEndConversation.Text = "End Conversation";
+            this.btnEndConversation.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.btnEndConversation.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.btnEndConversation.Visible = false;
             // 
-            // visualButton9
+            // btnReportUser
             // 
-            this.visualButton9.Animation = true;
-            this.visualButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualButton9.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.visualButton9.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualButton9.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.visualButton9.BackColorState.Pressed = System.Drawing.Color.Silver;
-            this.visualButton9.BackgroundStateGradientBrush = null;
-            this.visualButton9.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.visualButton9.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualButton9.Border.HoverVisible = true;
-            this.visualButton9.Border.Rounding = 6;
-            this.visualButton9.Border.Thickness = 1;
-            this.visualButton9.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualButton9.Border.Visible = true;
-            this.visualButton9.ControlBrushCollection = null;
-            this.visualButton9.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualButton9.ForeColor = System.Drawing.Color.Black;
-            this.visualButton9.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.btnReportUser.Animation = true;
+            this.btnReportUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnReportUser.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnReportUser.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnReportUser.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnReportUser.BackColorState.Pressed = System.Drawing.Color.Silver;
+            this.btnReportUser.BackgroundStateGradientBrush = null;
+            this.btnReportUser.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnReportUser.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.btnReportUser.Border.HoverVisible = true;
+            this.btnReportUser.Border.Rounding = 6;
+            this.btnReportUser.Border.Thickness = 1;
+            this.btnReportUser.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.btnReportUser.Border.Visible = true;
+            this.btnReportUser.ControlBrushCollection = null;
+            this.btnReportUser.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnReportUser.ForeColor = System.Drawing.Color.Black;
+            this.btnReportUser.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             border4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             border4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
             border4.HoverVisible = false;
@@ -393,68 +356,42 @@
             border4.Thickness = 1;
             border4.Type = VisualPlus.Enumerators.ShapeType.Rounded;
             border4.Visible = false;
-            this.visualButton9.Image.Border = border4;
-            this.visualButton9.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image3")));
-            this.visualButton9.Image.Point = new System.Drawing.Point(81, -4);
-            this.visualButton9.Image.Size = new System.Drawing.Size(24, 24);
-            this.visualButton9.Image.Visible = false;
-            this.visualButton9.Location = new System.Drawing.Point(203, 4);
-            this.visualButton9.Margin = new System.Windows.Forms.Padding(0);
-            this.visualButton9.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualButton9.Name = "visualButton9";
-            this.visualButton9.Size = new System.Drawing.Size(187, 17);
-            this.visualButton9.TabIndex = 3;
-            this.visualButton9.Text = "Request More.....";
-            this.visualButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.visualButton9.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.btnReportUser.Image.Border = border4;
+            this.btnReportUser.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image3")));
+            this.btnReportUser.Image.Point = new System.Drawing.Point(50, -2);
+            this.btnReportUser.Image.Size = new System.Drawing.Size(24, 24);
+            this.btnReportUser.Image.Visible = false;
+            this.btnReportUser.Location = new System.Drawing.Point(421, 401);
+            this.btnReportUser.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReportUser.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.btnReportUser.Name = "btnReportUser";
+            this.btnReportUser.Size = new System.Drawing.Size(125, 20);
+            this.btnReportUser.TabIndex = 4;
+            this.btnReportUser.Text = "Report";
+            this.btnReportUser.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.btnReportUser.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.btnReportUser.Visible = false;
             // 
-            // visualLabel5
+            // btnRequestMore
             // 
-            this.visualLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualLabel5.BackgroundStateGradientBrush = null;
-            this.visualLabel5.ControlBrushCollection = null;
-            this.visualLabel5.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel5.ForeColor = System.Drawing.Color.Black;
-            this.visualLabel5.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualLabel5.Location = new System.Drawing.Point(168, 28);
-            this.visualLabel5.Margin = new System.Windows.Forms.Padding(4);
-            this.visualLabel5.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel5.Name = "visualLabel5";
-            this.visualLabel5.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel5.Outline = false;
-            this.visualLabel5.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel5.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel5.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel5.ReflectionSpacing = 0;
-            this.visualLabel5.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel5.ShadowDirection = 315;
-            this.visualLabel5.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel5.ShadowOpacity = 100;
-            this.visualLabel5.Size = new System.Drawing.Size(260, 28);
-            this.visualLabel5.TabIndex = 2;
-            this.visualLabel5.Text = "No messages with Contact Name yet!";
-            this.visualLabel5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // visualButton8
-            // 
-            this.visualButton8.Animation = true;
-            this.visualButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualButton8.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.visualButton8.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualButton8.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.visualButton8.BackColorState.Pressed = System.Drawing.Color.Silver;
-            this.visualButton8.BackgroundStateGradientBrush = null;
-            this.visualButton8.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.visualButton8.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualButton8.Border.HoverVisible = true;
-            this.visualButton8.Border.Rounding = 6;
-            this.visualButton8.Border.Thickness = 1;
-            this.visualButton8.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualButton8.Border.Visible = true;
-            this.visualButton8.ControlBrushCollection = null;
-            this.visualButton8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualButton8.ForeColor = System.Drawing.Color.Black;
-            this.visualButton8.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.btnRequestMore.Animation = true;
+            this.btnRequestMore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnRequestMore.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRequestMore.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnRequestMore.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRequestMore.BackColorState.Pressed = System.Drawing.Color.Silver;
+            this.btnRequestMore.BackgroundStateGradientBrush = null;
+            this.btnRequestMore.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnRequestMore.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.btnRequestMore.Border.HoverVisible = true;
+            this.btnRequestMore.Border.Rounding = 6;
+            this.btnRequestMore.Border.Thickness = 1;
+            this.btnRequestMore.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.btnRequestMore.Border.Visible = true;
+            this.btnRequestMore.ControlBrushCollection = null;
+            this.btnRequestMore.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnRequestMore.ForeColor = System.Drawing.Color.Black;
+            this.btnRequestMore.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             border5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             border5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
             border5.HoverVisible = false;
@@ -462,71 +399,144 @@
             border5.Thickness = 1;
             border5.Type = VisualPlus.Enumerators.ShapeType.Rounded;
             border5.Visible = false;
-            this.visualButton8.Image.Border = border5;
-            this.visualButton8.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image4")));
-            this.visualButton8.Image.Point = new System.Drawing.Point(22, 2);
-            this.visualButton8.Image.Size = new System.Drawing.Size(24, 24);
-            this.visualButton8.Image.Visible = false;
-            this.visualButton8.Location = new System.Drawing.Point(477, 450);
-            this.visualButton8.Margin = new System.Windows.Forms.Padding(0);
-            this.visualButton8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualButton8.Name = "visualButton8";
-            this.visualButton8.Size = new System.Drawing.Size(68, 28);
-            this.visualButton8.TabIndex = 1;
-            this.visualButton8.Text = "Send";
-            this.visualButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.visualButton8.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.btnRequestMore.Image.Border = border5;
+            this.btnRequestMore.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image4")));
+            this.btnRequestMore.Image.Point = new System.Drawing.Point(81, -4);
+            this.btnRequestMore.Image.Size = new System.Drawing.Size(24, 24);
+            this.btnRequestMore.Image.Visible = false;
+            this.btnRequestMore.Location = new System.Drawing.Point(203, 1);
+            this.btnRequestMore.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRequestMore.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.btnRequestMore.Name = "btnRequestMore";
+            this.btnRequestMore.Size = new System.Drawing.Size(187, 17);
+            this.btnRequestMore.TabIndex = 3;
+            this.btnRequestMore.Text = "Request More.....";
+            this.btnRequestMore.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.btnRequestMore.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.btnRequestMore.Visible = false;
             // 
-            // visualTextBox2
+            // lblNoMessages
             // 
-            this.visualTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualTextBox2.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualTextBox2.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.visualTextBox2.BackgroundStateGradientBrush = null;
-            this.visualTextBox2.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.visualTextBox2.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualTextBox2.Border.HoverVisible = true;
-            this.visualTextBox2.Border.Rounding = 6;
-            this.visualTextBox2.Border.Thickness = 1;
-            this.visualTextBox2.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualTextBox2.Border.Visible = true;
-            this.visualTextBox2.ButtonBorder.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.visualTextBox2.ButtonBorder.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualTextBox2.ButtonBorder.HoverVisible = true;
-            this.visualTextBox2.ButtonBorder.Rounding = 6;
-            this.visualTextBox2.ButtonBorder.Thickness = 1;
-            this.visualTextBox2.ButtonBorder.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualTextBox2.ButtonBorder.Visible = true;
-            this.visualTextBox2.ButtonColor.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.visualTextBox2.ButtonColor.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualTextBox2.ButtonColor.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.visualTextBox2.ButtonColor.Pressed = System.Drawing.Color.Silver;
-            this.visualTextBox2.ButtonFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.visualTextBox2.ButtonIndent = 3;
-            this.visualTextBox2.ButtonText = "visualButton";
-            this.visualTextBox2.ButtonVisible = false;
-            this.visualTextBox2.ControlBrushCollection = null;
-            this.visualTextBox2.ForeColor = System.Drawing.Color.Black;
-            this.visualTextBox2.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualTextBox2.Image = null;
-            this.visualTextBox2.ImageVisible = false;
-            this.visualTextBox2.ImageWidth = 35;
-            this.visualTextBox2.Location = new System.Drawing.Point(4, 450);
-            this.visualTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.visualTextBox2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualTextBox2.Name = "visualTextBox2";
-            this.visualTextBox2.PasswordChar = '\0';
-            this.visualTextBox2.ReadOnly = false;
-            this.visualTextBox2.Size = new System.Drawing.Size(465, 25);
-            this.visualTextBox2.TabIndex = 0;
-            this.visualTextBox2.Text = "Enter Message";
-            this.visualTextBox2.TextBoxWidth = 607;
-            this.visualTextBox2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualTextBox2.Watermark.ActiveColor = System.Drawing.Color.Gray;
-            this.visualTextBox2.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualTextBox2.Watermark.InactiveColor = System.Drawing.Color.LightGray;
-            this.visualTextBox2.Watermark.Text = "Watermark text";
-            this.visualTextBox2.Watermark.Visible = false;
+            this.lblNoMessages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.lblNoMessages.BackgroundStateGradientBrush = null;
+            this.lblNoMessages.ControlBrushCollection = null;
+            this.lblNoMessages.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.lblNoMessages.ForeColor = System.Drawing.Color.Black;
+            this.lblNoMessages.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.lblNoMessages.Location = new System.Drawing.Point(168, 25);
+            this.lblNoMessages.Margin = new System.Windows.Forms.Padding(4);
+            this.lblNoMessages.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.lblNoMessages.Name = "lblNoMessages";
+            this.lblNoMessages.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.lblNoMessages.Outline = false;
+            this.lblNoMessages.OutlineColor = System.Drawing.Color.Red;
+            this.lblNoMessages.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.lblNoMessages.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblNoMessages.ReflectionSpacing = 0;
+            this.lblNoMessages.ShadowColor = System.Drawing.Color.Black;
+            this.lblNoMessages.ShadowDirection = 315;
+            this.lblNoMessages.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.lblNoMessages.ShadowOpacity = 100;
+            this.lblNoMessages.Size = new System.Drawing.Size(260, 28);
+            this.lblNoMessages.TabIndex = 2;
+            this.lblNoMessages.Text = "No messages with Contact Name yet!";
+            this.lblNoMessages.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.lblNoMessages.Visible = false;
+            // 
+            // btnSendMessage
+            // 
+            this.btnSendMessage.Animation = true;
+            this.btnSendMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnSendMessage.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSendMessage.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnSendMessage.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSendMessage.BackColorState.Pressed = System.Drawing.Color.Silver;
+            this.btnSendMessage.BackgroundStateGradientBrush = null;
+            this.btnSendMessage.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnSendMessage.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.btnSendMessage.Border.HoverVisible = true;
+            this.btnSendMessage.Border.Rounding = 6;
+            this.btnSendMessage.Border.Thickness = 1;
+            this.btnSendMessage.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.btnSendMessage.Border.Visible = true;
+            this.btnSendMessage.ControlBrushCollection = null;
+            this.btnSendMessage.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnSendMessage.ForeColor = System.Drawing.Color.Black;
+            this.btnSendMessage.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            border6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            border6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            border6.HoverVisible = false;
+            border6.Rounding = 6;
+            border6.Thickness = 1;
+            border6.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            border6.Visible = false;
+            this.btnSendMessage.Image.Border = border6;
+            this.btnSendMessage.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image5")));
+            this.btnSendMessage.Image.Point = new System.Drawing.Point(22, 2);
+            this.btnSendMessage.Image.Size = new System.Drawing.Size(24, 24);
+            this.btnSendMessage.Image.Visible = false;
+            this.btnSendMessage.Location = new System.Drawing.Point(477, 447);
+            this.btnSendMessage.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSendMessage.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.btnSendMessage.Name = "btnSendMessage";
+            this.btnSendMessage.Size = new System.Drawing.Size(68, 28);
+            this.btnSendMessage.TabIndex = 1;
+            this.btnSendMessage.Text = "Send";
+            this.btnSendMessage.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.btnSendMessage.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.btnSendMessage.Visible = false;
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.txtMessage.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.txtMessage.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            this.txtMessage.BackgroundStateGradientBrush = null;
+            this.txtMessage.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtMessage.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.txtMessage.Border.HoverVisible = true;
+            this.txtMessage.Border.Rounding = 6;
+            this.txtMessage.Border.Thickness = 1;
+            this.txtMessage.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.txtMessage.Border.Visible = true;
+            this.txtMessage.ButtonBorder.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtMessage.ButtonBorder.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.txtMessage.ButtonBorder.HoverVisible = true;
+            this.txtMessage.ButtonBorder.Rounding = 6;
+            this.txtMessage.ButtonBorder.Thickness = 1;
+            this.txtMessage.ButtonBorder.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.txtMessage.ButtonBorder.Visible = true;
+            this.txtMessage.ButtonColor.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtMessage.ButtonColor.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.txtMessage.ButtonColor.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtMessage.ButtonColor.Pressed = System.Drawing.Color.Silver;
+            this.txtMessage.ButtonFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMessage.ButtonIndent = 3;
+            this.txtMessage.ButtonText = "visualButton";
+            this.txtMessage.ButtonVisible = false;
+            this.txtMessage.ControlBrushCollection = null;
+            this.txtMessage.ForeColor = System.Drawing.Color.Black;
+            this.txtMessage.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.txtMessage.Image = null;
+            this.txtMessage.ImageVisible = false;
+            this.txtMessage.ImageWidth = 35;
+            this.txtMessage.Location = new System.Drawing.Point(4, 447);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMessage.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.PasswordChar = '\0';
+            this.txtMessage.ReadOnly = false;
+            this.txtMessage.Size = new System.Drawing.Size(469, 25);
+            this.txtMessage.TabIndex = 0;
+            this.txtMessage.Text = "Enter Message";
+            this.txtMessage.TextBoxWidth = 459;
+            this.txtMessage.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.txtMessage.Visible = false;
+            this.txtMessage.Watermark.ActiveColor = System.Drawing.Color.Gray;
+            this.txtMessage.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.txtMessage.Watermark.InactiveColor = System.Drawing.Color.LightGray;
+            this.txtMessage.Watermark.Text = "Watermark text";
+            this.txtMessage.Watermark.Visible = false;
             // 
             // visualGroupBox2
             // 
@@ -549,7 +559,7 @@
             this.visualGroupBox2.Controls.Add(this.visualLabel2);
             this.visualGroupBox2.ForeColor = System.Drawing.Color.Black;
             this.visualGroupBox2.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualGroupBox2.Location = new System.Drawing.Point(16, 235);
+            this.visualGroupBox2.Location = new System.Drawing.Point(16, 212);
             this.visualGroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.visualGroupBox2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox2.Name = "visualGroupBox2";
@@ -563,6 +573,18 @@
             this.visualGroupBox2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.visualGroupBox2.TitleAlignment = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.TitleAlignments.Top;
             this.visualGroupBox2.TitleBoxHeight = 25;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.pictureBox1.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(105, 91);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // visualButton3
             // 
@@ -584,19 +606,19 @@
             this.visualButton3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualButton3.ForeColor = System.Drawing.Color.Black;
             this.visualButton3.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            border6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            border6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            border6.HoverVisible = false;
-            border6.Rounding = 6;
-            border6.Thickness = 1;
-            border6.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            border6.Visible = false;
-            this.visualButton3.Image.Border = border6;
-            this.visualButton3.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image5")));
+            border7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            border7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            border7.HoverVisible = false;
+            border7.Rounding = 6;
+            border7.Thickness = 1;
+            border7.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            border7.Visible = false;
+            this.visualButton3.Image.Border = border7;
+            this.visualButton3.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image6")));
             this.visualButton3.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton3.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton3.Image.Visible = false;
-            this.visualButton3.Location = new System.Drawing.Point(117, 47);
+            this.visualButton3.Location = new System.Drawing.Point(117, 44);
             this.visualButton3.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton3.Name = "visualButton3";
@@ -626,25 +648,25 @@
             this.visualButton2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualButton2.ForeColor = System.Drawing.Color.Black;
             this.visualButton2.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            border7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            border7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            border7.HoverVisible = false;
-            border7.Rounding = 6;
-            border7.Thickness = 1;
-            border7.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            border7.Visible = false;
-            this.visualButton2.Image.Border = border7;
-            this.visualButton2.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image6")));
+            border8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            border8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            border8.HoverVisible = false;
+            border8.Rounding = 6;
+            border8.Thickness = 1;
+            border8.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            border8.Visible = false;
+            this.visualButton2.Image.Border = border8;
+            this.visualButton2.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image7")));
             this.visualButton2.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton2.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton2.Image.Visible = false;
-            this.visualButton2.Location = new System.Drawing.Point(117, 74);
+            this.visualButton2.Location = new System.Drawing.Point(117, 71);
             this.visualButton2.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton2.Name = "visualButton2";
             this.visualButton2.Size = new System.Drawing.Size(172, 21);
             this.visualButton2.TabIndex = 3;
-            this.visualButton2.Text = "Start Converstaion";
+            this.visualButton2.Text = "Start Conversation";
             this.visualButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.visualButton2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
@@ -656,7 +678,7 @@
             this.visualLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.visualLabel2.ForeColor = System.Drawing.Color.Green;
             this.visualLabel2.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualLabel2.Location = new System.Drawing.Point(235, 22);
+            this.visualLabel2.Location = new System.Drawing.Point(234, 22);
             this.visualLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.visualLabel2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel2.Name = "visualLabel2";
@@ -696,7 +718,7 @@
             this.visualGroupBox3.Controls.Add(this.visualLabel3);
             this.visualGroupBox3.ForeColor = System.Drawing.Color.Black;
             this.visualGroupBox3.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualGroupBox3.Location = new System.Drawing.Point(16, 341);
+            this.visualGroupBox3.Location = new System.Drawing.Point(16, 318);
             this.visualGroupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.visualGroupBox3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox3.Name = "visualGroupBox3";
@@ -710,6 +732,18 @@
             this.visualGroupBox3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.visualGroupBox3.TitleAlignment = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.TitleAlignments.Top;
             this.visualGroupBox3.TitleBoxHeight = 25;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.pictureBox2.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(105, 91);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // visualButton4
             // 
@@ -731,19 +765,19 @@
             this.visualButton4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualButton4.ForeColor = System.Drawing.Color.Black;
             this.visualButton4.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            border8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            border8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            border8.HoverVisible = false;
-            border8.Rounding = 6;
-            border8.Thickness = 1;
-            border8.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            border8.Visible = false;
-            this.visualButton4.Image.Border = border8;
-            this.visualButton4.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image7")));
+            border9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            border9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            border9.HoverVisible = false;
+            border9.Rounding = 6;
+            border9.Thickness = 1;
+            border9.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            border9.Visible = false;
+            this.visualButton4.Image.Border = border9;
+            this.visualButton4.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image8")));
             this.visualButton4.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton4.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton4.Image.Visible = false;
-            this.visualButton4.Location = new System.Drawing.Point(117, 47);
+            this.visualButton4.Location = new System.Drawing.Point(117, 44);
             this.visualButton4.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton4.Name = "visualButton4";
@@ -773,19 +807,19 @@
             this.visualButton5.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualButton5.ForeColor = System.Drawing.Color.Black;
             this.visualButton5.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            border9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            border9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            border9.HoverVisible = false;
-            border9.Rounding = 6;
-            border9.Thickness = 1;
-            border9.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            border9.Visible = false;
-            this.visualButton5.Image.Border = border9;
-            this.visualButton5.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image8")));
+            border10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            border10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            border10.HoverVisible = false;
+            border10.Rounding = 6;
+            border10.Thickness = 1;
+            border10.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            border10.Visible = false;
+            this.visualButton5.Image.Border = border10;
+            this.visualButton5.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image9")));
             this.visualButton5.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton5.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton5.Image.Visible = false;
-            this.visualButton5.Location = new System.Drawing.Point(117, 74);
+            this.visualButton5.Location = new System.Drawing.Point(117, 71);
             this.visualButton5.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton5.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton5.Name = "visualButton5";
@@ -803,7 +837,7 @@
             this.visualLabel3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.visualLabel3.ForeColor = System.Drawing.Color.Gold;
             this.visualLabel3.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualLabel3.Location = new System.Drawing.Point(245, 23);
+            this.visualLabel3.Location = new System.Drawing.Point(245, 22);
             this.visualLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.visualLabel3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel3.Name = "visualLabel3";
@@ -843,7 +877,7 @@
             this.visualGroupBox4.Controls.Add(this.visualLabel4);
             this.visualGroupBox4.ForeColor = System.Drawing.Color.Black;
             this.visualGroupBox4.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualGroupBox4.Location = new System.Drawing.Point(16, 452);
+            this.visualGroupBox4.Location = new System.Drawing.Point(16, 429);
             this.visualGroupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.visualGroupBox4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox4.Name = "visualGroupBox4";
@@ -857,6 +891,18 @@
             this.visualGroupBox4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.visualGroupBox4.TitleAlignment = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.TitleAlignments.Top;
             this.visualGroupBox4.TitleBoxHeight = 25;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.pictureBox3.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(105, 91);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
             // 
             // visualButton6
             // 
@@ -878,19 +924,19 @@
             this.visualButton6.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualButton6.ForeColor = System.Drawing.Color.Black;
             this.visualButton6.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            border10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            border10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            border10.HoverVisible = false;
-            border10.Rounding = 6;
-            border10.Thickness = 1;
-            border10.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            border10.Visible = false;
-            this.visualButton6.Image.Border = border10;
-            this.visualButton6.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image9")));
+            border11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            border11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            border11.HoverVisible = false;
+            border11.Rounding = 6;
+            border11.Thickness = 1;
+            border11.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            border11.Visible = false;
+            this.visualButton6.Image.Border = border11;
+            this.visualButton6.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image10")));
             this.visualButton6.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton6.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton6.Image.Visible = false;
-            this.visualButton6.Location = new System.Drawing.Point(117, 47);
+            this.visualButton6.Location = new System.Drawing.Point(117, 44);
             this.visualButton6.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton6.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton6.Name = "visualButton6";
@@ -920,19 +966,19 @@
             this.visualButton7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualButton7.ForeColor = System.Drawing.Color.Black;
             this.visualButton7.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            border11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            border11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            border11.HoverVisible = false;
-            border11.Rounding = 6;
-            border11.Thickness = 1;
-            border11.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            border11.Visible = false;
-            this.visualButton7.Image.Border = border11;
-            this.visualButton7.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image10")));
+            border12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            border12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            border12.HoverVisible = false;
+            border12.Rounding = 6;
+            border12.Thickness = 1;
+            border12.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            border12.Visible = false;
+            this.visualButton7.Image.Border = border12;
+            this.visualButton7.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image11")));
             this.visualButton7.Image.Point = new System.Drawing.Point(74, -2);
             this.visualButton7.Image.Size = new System.Drawing.Size(24, 24);
             this.visualButton7.Image.Visible = false;
-            this.visualButton7.Location = new System.Drawing.Point(117, 74);
+            this.visualButton7.Location = new System.Drawing.Point(117, 71);
             this.visualButton7.Margin = new System.Windows.Forms.Padding(0);
             this.visualButton7.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualButton7.Name = "visualButton7";
@@ -950,7 +996,7 @@
             this.visualLabel4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.visualLabel4.ForeColor = System.Drawing.Color.Orange;
             this.visualLabel4.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualLabel4.Location = new System.Drawing.Point(249, 23);
+            this.visualLabel4.Location = new System.Drawing.Point(249, 22);
             this.visualLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.visualLabel4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel4.Name = "visualLabel4";
@@ -998,7 +1044,7 @@
             "Alphabetical Z-A",
             "Online First",
             "Offline First"});
-            this.visualComboBox1.Location = new System.Drawing.Point(16, 199);
+            this.visualComboBox1.Location = new System.Drawing.Point(16, 176);
             this.visualComboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.visualComboBox1.MenuItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.visualComboBox1.MenuItemNormal = System.Drawing.Color.White;
@@ -1019,151 +1065,49 @@
             this.visualComboBox1.Watermark.Text = "Watermark text";
             this.visualComboBox1.Watermark.Visible = false;
             // 
-            // visualContextMenuStrip1
+            // btnPerformModeration
             // 
-            this.visualContextMenuStrip1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(118)))));
-            this.visualContextMenuStrip1.ArrowDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.visualContextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualContextMenuStrip1.Background = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualContextMenuStrip1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.visualContextMenuStrip1.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualContextMenuStrip1.Border.HoverVisible = false;
-            this.visualContextMenuStrip1.Border.Rounding = 6;
-            this.visualContextMenuStrip1.Border.Thickness = 1;
-            this.visualContextMenuStrip1.Border.Type = VisualPlus.Enumerators.ShapeType.Rectangle;
-            this.visualContextMenuStrip1.Border.Visible = true;
-            this.visualContextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.visualContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contactsToolStripMenuItem});
-            this.visualContextMenuStrip1.MenuFont = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualContextMenuStrip1.Name = "visualContextMenuStrip1";
-            this.visualContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.visualContextMenuStrip1.Size = new System.Drawing.Size(133, 28);
-            this.visualContextMenuStrip1.TextDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            // 
-            // contactsToolStripMenuItem
-            // 
-            this.contactsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.blockedUsersToolStripMenuItem});
-            this.contactsToolStripMenuItem.Name = "contactsToolStripMenuItem";
-            this.contactsToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
-            this.contactsToolStripMenuItem.Text = "Contacts";
-            // 
-            // blockedUsersToolStripMenuItem
-            // 
-            this.blockedUsersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contactNameToolStripMenuItem,
-            this.contactNameToolStripMenuItem1,
-            this.contactNameToolStripMenuItem2,
-            this.contactNameToolStripMenuItem3});
-            this.blockedUsersToolStripMenuItem.Name = "blockedUsersToolStripMenuItem";
-            this.blockedUsersToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
-            this.blockedUsersToolStripMenuItem.Text = "Blocked Users";
-            // 
-            // contactNameToolStripMenuItem
-            // 
-            this.contactNameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.unblockToolStripMenuItem});
-            this.contactNameToolStripMenuItem.Name = "contactNameToolStripMenuItem";
-            this.contactNameToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
-            this.contactNameToolStripMenuItem.Text = "Contact Name";
-            // 
-            // unblockToolStripMenuItem
-            // 
-            this.unblockToolStripMenuItem.Name = "unblockToolStripMenuItem";
-            this.unblockToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
-            this.unblockToolStripMenuItem.Text = "Unblock";
-            // 
-            // contactNameToolStripMenuItem1
-            // 
-            this.contactNameToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.unblockToolStripMenuItem1});
-            this.contactNameToolStripMenuItem1.Name = "contactNameToolStripMenuItem1";
-            this.contactNameToolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
-            this.contactNameToolStripMenuItem1.Text = "Contact Name";
-            // 
-            // unblockToolStripMenuItem1
-            // 
-            this.unblockToolStripMenuItem1.Name = "unblockToolStripMenuItem1";
-            this.unblockToolStripMenuItem1.Size = new System.Drawing.Size(134, 26);
-            this.unblockToolStripMenuItem1.Text = "Unblock";
-            // 
-            // contactNameToolStripMenuItem2
-            // 
-            this.contactNameToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.unblockToolStripMenuItem2});
-            this.contactNameToolStripMenuItem2.Name = "contactNameToolStripMenuItem2";
-            this.contactNameToolStripMenuItem2.Size = new System.Drawing.Size(172, 26);
-            this.contactNameToolStripMenuItem2.Text = "Contact Name";
-            // 
-            // unblockToolStripMenuItem2
-            // 
-            this.unblockToolStripMenuItem2.Name = "unblockToolStripMenuItem2";
-            this.unblockToolStripMenuItem2.Size = new System.Drawing.Size(134, 26);
-            this.unblockToolStripMenuItem2.Text = "Unblock";
-            // 
-            // contactNameToolStripMenuItem3
-            // 
-            this.contactNameToolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.unblockToolStripMenuItem3});
-            this.contactNameToolStripMenuItem3.Name = "contactNameToolStripMenuItem3";
-            this.contactNameToolStripMenuItem3.Size = new System.Drawing.Size(172, 26);
-            this.contactNameToolStripMenuItem3.Text = "Contact Name";
-            // 
-            // unblockToolStripMenuItem3
-            // 
-            this.unblockToolStripMenuItem3.Name = "unblockToolStripMenuItem3";
-            this.unblockToolStripMenuItem3.Size = new System.Drawing.Size(134, 26);
-            this.unblockToolStripMenuItem3.Text = "Unblock";
-            // 
-            // userProfilePicture
-            // 
-            this.userProfilePicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.userProfilePicture.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
-            this.userProfilePicture.Location = new System.Drawing.Point(4, 3);
-            this.userProfilePicture.Margin = new System.Windows.Forms.Padding(4);
-            this.userProfilePicture.Name = "userProfilePicture";
-            this.userProfilePicture.Size = new System.Drawing.Size(105, 91);
-            this.userProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.userProfilePicture.TabIndex = 5;
-            this.userProfilePicture.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.pictureBox1.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 91);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.pictureBox2.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 3);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(105, 91);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.pictureBox3.Image = global::Hawkchat.Client.Properties.Resources.DefaultAvatar;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 3);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(105, 91);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
+            this.btnPerformModeration.Animation = true;
+            this.btnPerformModeration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnPerformModeration.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPerformModeration.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnPerformModeration.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPerformModeration.BackColorState.Pressed = System.Drawing.Color.Silver;
+            this.btnPerformModeration.BackgroundStateGradientBrush = null;
+            this.btnPerformModeration.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnPerformModeration.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.btnPerformModeration.Border.HoverVisible = true;
+            this.btnPerformModeration.Border.Rounding = 6;
+            this.btnPerformModeration.Border.Thickness = 1;
+            this.btnPerformModeration.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.btnPerformModeration.Border.Visible = true;
+            this.btnPerformModeration.ControlBrushCollection = null;
+            this.btnPerformModeration.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnPerformModeration.ForeColor = System.Drawing.Color.Black;
+            this.btnPerformModeration.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            border1.HoverVisible = false;
+            border1.Rounding = 6;
+            border1.Thickness = 1;
+            border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            border1.Visible = false;
+            this.btnPerformModeration.Image.Border = border1;
+            this.btnPerformModeration.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
+            this.btnPerformModeration.Image.Point = new System.Drawing.Point(50, -4);
+            this.btnPerformModeration.Image.Size = new System.Drawing.Size(24, 24);
+            this.btnPerformModeration.Image.Visible = false;
+            this.btnPerformModeration.Location = new System.Drawing.Point(117, 40);
+            this.btnPerformModeration.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPerformModeration.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.btnPerformModeration.Name = "btnPerformModeration";
+            this.btnPerformModeration.Size = new System.Drawing.Size(124, 17);
+            this.btnPerformModeration.TabIndex = 7;
+            this.btnPerformModeration.Text = "Moderation";
+            this.btnPerformModeration.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.btnPerformModeration.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.btnPerformModeration.Visible = false;
+            this.btnPerformModeration.Click += new System.EventHandler(this.btnPerformModeration_Click);
             // 
             // MainWindow
             // 
@@ -1176,7 +1120,7 @@
             this.Border.Thickness = 3;
             this.Border.Type = VisualPlus.Enumerators.ShapeType.Rectangle;
             this.Border.Visible = true;
-            this.ClientSize = new System.Drawing.Size(883, 561);
+            this.ClientSize = new System.Drawing.Size(881, 538);
             this.Controls.Add(this.visualComboBox1);
             this.Controls.Add(this.visualGroupBox4);
             this.Controls.Add(this.visualGroupBox3);
@@ -1184,33 +1128,35 @@
             this.Controls.Add(this.visualPanel1);
             this.Controls.Add(this.visualTextBox1);
             this.Controls.Add(this.groupBoxUserInfo);
-            border12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            border12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            border12.HoverVisible = false;
-            border12.Rounding = 6;
-            border12.Thickness = 1;
-            border12.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            border12.Visible = false;
-            this.Image.Border = border12;
-            this.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image11")));
+            border13.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            border13.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            border13.HoverVisible = false;
+            border13.Rounding = 6;
+            border13.Thickness = 1;
+            border13.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            border13.Visible = false;
+            this.Image.Border = border13;
+            this.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image12")));
             this.Image.Point = new System.Drawing.Point(5, 7);
             this.Image.Size = new System.Drawing.Size(16, 16);
             this.Image.Visible = true;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(881, 538);
+            this.MinimumSize = new System.Drawing.Size(240, 440);
             this.Name = "MainWindow";
             this.Text = "Hawk Chat - Contact Name";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.groupBoxUserInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userProfilePicture)).EndInit();
             this.visualPanel1.ResumeLayout(false);
             this.visualPanel1.PerformLayout();
             this.visualGroupBox2.ResumeLayout(false);
-            this.visualGroupBox3.ResumeLayout(false);
-            this.visualGroupBox4.ResumeLayout(false);
-            this.visualContextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.visualGroupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.visualGroupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1228,10 +1174,10 @@
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton3;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton2;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel2;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton9;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel5;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton8;
-        private VisualPlus.Toolkit.Controls.Editors.VisualTextBox visualTextBox2;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualButton btnRequestMore;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel lblNoMessages;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualButton btnSendMessage;
+        private VisualPlus.Toolkit.Controls.Editors.VisualTextBox txtMessage;
         private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox3;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton4;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton5;
@@ -1241,22 +1187,12 @@
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton7;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel4;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox visualComboBox1;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton11;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton10;
-        private VisualPlus.Toolkit.Controls.Navigation.VisualContextMenuStrip visualContextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem contactsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem blockedUsersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contactNameToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem unblockToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contactNameToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem unblockToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem contactNameToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem unblockToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem contactNameToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem unblockToolStripMenuItem3;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualButton btnEndConversation;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualButton btnReportUser;
         private System.Windows.Forms.PictureBox userProfilePicture;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualButton btnPerformModeration;
     }
 }

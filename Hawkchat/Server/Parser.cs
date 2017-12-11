@@ -12,6 +12,9 @@ namespace Hawkchat.Server
     public class Parser
     {
 
+        public static bool messagesDisabled = false, messagesEnabled = true;
+        public static string REASON = "";
+
         public static async void ParseCommand(string command, Message message, JObject json = null)
         {
 
@@ -19,6 +22,37 @@ namespace Hawkchat.Server
 
             switch (command)
             {
+
+                case "DISABLEMESSAGES":
+                    REASON = json["reason"].ToString();
+
+                    jsonResponse.command = "DISABLEMESSAGING";
+                    jsonResponse.reason = REASON;
+
+                    string authorisedBy = json["authorisedby"].ToString();
+
+                    Util.CyanWriteLine($"{authorisedBy} has disabled message for all users.");
+
+                    messagesEnabled = false;
+                    messagesDisabled = true;
+
+                    Server.server.Broadcast(jsonResponse.ToString());
+
+
+                    break;
+
+                case "ENABLEMESSAGES":
+                    jsonResponse.command = "ENABLEMESSAGING";
+
+                    messagesDisabled = false;
+                    messagesEnabled = true;
+
+                    Server.server.Broadcast(jsonResponse.ToString());
+
+                    string authoriser = json["authorisedby"].ToString();
+                    Util.CyanWriteLine($"{authoriser} has enabled messaging for all users.");
+
+                    break;
 
                 case "AUTH":
 
@@ -61,9 +95,6 @@ namespace Hawkchat.Server
 
                     reader.Close();
 
-                    jsonResponse.accountID = UserID;
-                    jsonResponse.avatarURL = avatarURL;
-
                     string banQuery = $"SELECT * FROM bans WHERE accountid='{UserID}'";
 
                     SQLiteDataReader banReader = DBUtils.ExecuteReader(connection, banQuery);
@@ -74,6 +105,25 @@ namespace Hawkchat.Server
                         // user is banned
                         jsonResponse.authenticated = false;
                         jsonResponse.reason = "BANNED";
+
+                    }
+                    else
+                    {
+
+                        jsonResponse.accountID = UserID;
+                        jsonResponse.avatarURL = avatarURL;
+                        if (messagesDisabled)
+                        {
+
+                            jsonResponse.information = "MESSAGINGDISABLED";
+                            jsonResponse.reason = REASON;
+
+                        } else
+                        {
+
+                            jsonResponse.information = "MESSAGINGENABLED";
+
+                        }
 
                     }
 
@@ -243,6 +293,7 @@ namespace Hawkchat.Server
                     message.Reply(jsonResponse.ToString(Formatting.None));
                     
                     break;
+                    
 
             }
 

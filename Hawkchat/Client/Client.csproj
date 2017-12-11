@@ -78,6 +78,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\AdminTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\AdminTools.Designer.cs">
+      <DependentUpon>AdminTools.cs</DependentUpon>
+    </Compile>
     <Compile Include="BannedWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,7 +111,11 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="utils\Constants.cs" />
     <Compile Include="utils\Utils.cs" />
+    <EmbeddedResource Include="admin\AdminTools.resx">
+      <DependentUpon>AdminTools.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BannedWindow.resx">
       <DependentUpon>BannedWindow.cs</DependentUpon>
     </EmbeddedResource>

@@ -23,6 +23,7 @@ namespace Hawkchat.Client
 
         public static long ACCOUNTID;
         public static string USERNAME, AVATAR_URL;
+        private MainWindow mainWindow;
 
         public LoginWindow()
         {
@@ -36,6 +37,8 @@ namespace Hawkchat.Client
                client = new SimpleTcpClient().Connect("server ip", 3289);
 #endif
 
+                client.DataReceived += Client_DataReceived;
+
 
             }
             catch (Exception)
@@ -44,6 +47,35 @@ namespace Hawkchat.Client
                 MessageBox.Show("Our login server is currently undergoing maintenance. Sorry for any inconvenience.", "Server Maintenance", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 Environment.Exit(-1);
+
+            }
+        }
+
+        public static string REASON;
+
+        private void Client_DataReceived(object sender, SimpleTCP.Message e)
+        {
+
+            if (e.MessageString.Contains("command"))
+            {
+                JObject json = JObject.Parse(e.MessageString);
+
+                string command = json["command"].ToString();
+
+                switch (command)
+                {
+
+                    case "DISABLEMESSAGING":
+                        REASON = json["reason"].ToString();
+                        mainWindow.ReceivedDisableMessaging();
+
+                        break;
+
+                    case "ENABLEMESSAGING":
+                        mainWindow.ReceivedEnableMessaging();
+                        break;
+
+                }
 
             }
         }
@@ -106,9 +138,25 @@ namespace Hawkchat.Client
 
                 //MessageBox.Show("Your report about this user has been sent. You will receive information once this matter has been resolved.", "Hawkchat", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                MainWindow mainWindow = new MainWindow();
-
+                mainWindow = new MainWindow();
+                
                 mainWindow.Show();
+
+                if (returnedJson["information"].ToString().Equals("MESSAGINGDISABLED"))
+                {
+
+                    REASON = returnedJson["reason"].ToString();
+                    mainWindow.ReceivedDisableMessaging();
+
+                }
+                else if (returnedJson["information"].ToString().Equals("MESSAGINGENABLED"))
+                {
+
+                    mainWindow.ReceivedEnableMessaging();
+
+                }
+
+
                 this.Hide();
 
             }

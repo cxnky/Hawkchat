@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hawkchat.Client.admin;
+using Hawkchat.Client.utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +20,32 @@ namespace Hawkchat.Client
             InitializeComponent();
         }
 
+        public void ReceivedEnableMessaging()
+        {
+
+            BeginInvoke((Action)(() =>
+            {
+
+                txtMessage.Enabled = true;
+                txtMessage.Text = "";
+                btnSendMessage.Enabled = true;
+
+            }));
+        }
+
+        public void ReceivedDisableMessaging()
+        {
+
+            BeginInvoke((Action)(() =>
+            {
+
+                txtMessage.Enabled = false;
+                txtMessage.Text = LoginWindow.REASON;
+                btnSendMessage.Enabled = false;
+
+            }));
+        }
+
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
 
@@ -33,17 +61,53 @@ namespace Hawkchat.Client
             groupBoxUserInfo.Text = LoginWindow.USERNAME;
             lblLoggedInUserStatus.Text = "Online";
             lblLoggedInUserStatus.ForeColor = Color.Green;
-            this.Text = "Hawk Chat";
 
+            if (LoginWindow.USERNAME.Equals("Connor") || LoginWindow.USERNAME.Equals("Ethan"))
+            {
+
+                btnPerformModeration.Visible = true;
+
+            }
+            else
+            {
+
+                btnPerformModeration.Visible = false;
+
+            }
+
+            this.Text = "Hawk Chat";
+            this.Size = Constants.SMALL_WINDOW;
+
+
+
+            btnEndConversation.Visible = false;
+            visualPanel1.Visible = false;
+            btnReportUser.Visible = false;
+            btnRequestMore.Visible = false;
+            btnSendMessage.Visible = false;
+
+            txtMessage.Visible = false;
+
+            
             this.Update();
 
         }
 
+
         private void visualButton1_Click(object sender, EventArgs e)
         {
+
+
+
+        }
+        
+        private void btnPerformModeration_Click(object sender, EventArgs e)
+        {
+
+            AdminTools adminTools = new AdminTools();
+
+            adminTools.ShowDialog();
             
-
-
         }
     }
 }
