@@ -88,11 +88,14 @@ namespace Hawkchat.Client
             txtMessage.Visible = false;
             
             this.Update();
-            
+
+            AutoUpdater.Start("http://blackhawksoftware.net/software/hawkchat/updater/appcast.xml");
+
             System.Timers.Timer updateChecker = new System.Timers.Timer();
 
             updateChecker.Interval = 60000;
             updateChecker.Elapsed += UpdateChecker_Elapsed;
+            updateChecker.Enabled = true;
             updateChecker.Start();
 
         }
