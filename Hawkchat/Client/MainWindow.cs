@@ -110,7 +110,9 @@ namespace Hawkchat.Client
         private void visualButton1_Click(object sender, EventArgs e)
         {
 
+            UserSettings userSettings = new UserSettings();
 
+            userSettings.ShowDialog();
 
         }
         

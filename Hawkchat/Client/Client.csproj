@@ -118,6 +118,7 @@
       <DependentUpon>UserSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="utils\Constants.cs" />
+    <Compile Include="utils\UserPreferences.cs" />
     <Compile Include="utils\Utils.cs" />
     <EmbeddedResource Include="admin\AdminTools.resx">
       <DependentUpon>AdminTools.cs</DependentUpon>
