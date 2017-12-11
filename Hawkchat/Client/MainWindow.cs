@@ -1,4 +1,5 @@
-﻿using Hawkchat.Client.admin;
+﻿using AutoUpdaterDotNET;
+using Hawkchat.Client.admin;
 using Hawkchat.Client.utils;
 using System;
 using System.Collections.Generic;
@@ -77,9 +78,7 @@ namespace Hawkchat.Client
 
             this.Text = "Hawk Chat";
             this.Size = Constants.SMALL_WINDOW;
-
-
-
+            
             btnEndConversation.Visible = false;
             visualPanel1.Visible = false;
             btnReportUser.Visible = false;
@@ -87,12 +86,23 @@ namespace Hawkchat.Client
             btnSendMessage.Visible = false;
 
             txtMessage.Visible = false;
-
             
             this.Update();
+            
+            System.Timers.Timer updateChecker = new System.Timers.Timer();
+
+            updateChecker.Interval = 60000;
+            updateChecker.Elapsed += UpdateChecker_Elapsed;
+            updateChecker.Start();
 
         }
 
+        private void UpdateChecker_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+
+            AutoUpdater.Start("http://blackhawksoftware.net/software/hawkchat/updater/appcast.xml");
+
+        }
 
         private void visualButton1_Click(object sender, EventArgs e)
         {
