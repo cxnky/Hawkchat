@@ -81,6 +81,8 @@ namespace Hawkchat.Server
 
                         message.Reply(jsonResponse.ToString(Formatting.None));
 
+                        return;
+
                     }
 
                     string UserID = "", avatarURL = "";
