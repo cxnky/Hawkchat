@@ -9,7 +9,26 @@ namespace Hawkchat.Client.utils
     public class UserPreferences
     {
 
-        public static bool NOTIFY_WHEN_FRIEND_ONLINE = false;
+        public class General
+        {
+
+
+
+        }
+
+        public class Notifications
+        {
+
+            public static bool NOTIFY_WHEN_FRIEND_ONLINE = false;
+
+        }
+
+        public class Messaging
+        {
+
+            public static bool STORE_MESSAGES_LOCALLY = false;
+
+        }
 
     }
 }

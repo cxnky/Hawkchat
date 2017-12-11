@@ -36,9 +36,14 @@
             this.notificationsTab = new System.Windows.Forms.TabPage();
             this.visualGroupBox1 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.chkNotifyWhenFriendOnline = new VisualPlus.Toolkit.Controls.Interactivity.VisualCheckBox();
+            this.messagesTab = new System.Windows.Forms.TabPage();
+            this.visualGroupBox2 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
+            this.chkStoreMessagesLocally = new VisualPlus.Toolkit.Controls.Interactivity.VisualCheckBox();
             this.visualTabControl1.SuspendLayout();
             this.notificationsTab.SuspendLayout();
             this.visualGroupBox1.SuspendLayout();
+            this.messagesTab.SuspendLayout();
+            this.visualGroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // visualTabControl1
@@ -56,6 +61,7 @@
             this.visualTabControl1.Border.Visible = true;
             this.visualTabControl1.Controls.Add(this.generalTab);
             this.visualTabControl1.Controls.Add(this.notificationsTab);
+            this.visualTabControl1.Controls.Add(this.messagesTab);
             this.visualTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.visualTabControl1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualTabControl1.ItemSize = new System.Drawing.Size(100, 25);
@@ -133,7 +139,7 @@
             this.visualGroupBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox1.Name = "visualGroupBox1";
             this.visualGroupBox1.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
-            this.visualGroupBox1.Separator = true;
+            this.visualGroupBox1.Separator = false;
             this.visualGroupBox1.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.visualGroupBox1.Size = new System.Drawing.Size(282, 60);
             this.visualGroupBox1.TabIndex = 0;
@@ -183,7 +189,90 @@
             this.chkNotifyWhenFriendOnline.Text = "Notify me when a friend comes online";
             this.chkNotifyWhenFriendOnline.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.chkNotifyWhenFriendOnline.TextSize = new System.Drawing.Size(242, 20);
-            this.chkNotifyWhenFriendOnline.ToggleChanged += new VisualPlus.Delegates.ToggleChangedEventHandler(this.visualCheckBox1_ToggleChanged);
+            this.chkNotifyWhenFriendOnline.ToggleChanged += new VisualPlus.Delegates.ToggleChangedEventHandler(this.friendOnlineNotify_ToggleChanged);
+            // 
+            // messagesTab
+            // 
+            this.messagesTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            this.messagesTab.Controls.Add(this.visualGroupBox2);
+            this.messagesTab.Location = new System.Drawing.Point(4, 29);
+            this.messagesTab.Name = "messagesTab";
+            this.messagesTab.Size = new System.Drawing.Size(584, 266);
+            this.messagesTab.TabIndex = 2;
+            this.messagesTab.Text = "Messages";
+            // 
+            // visualGroupBox2
+            // 
+            this.visualGroupBox2.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.visualGroupBox2.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.visualGroupBox2.BackgroundStateGradientBrush = null;
+            this.visualGroupBox2.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.visualGroupBox2.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.visualGroupBox2.Border.HoverVisible = true;
+            this.visualGroupBox2.Border.Rounding = 6;
+            this.visualGroupBox2.Border.Thickness = 1;
+            this.visualGroupBox2.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.visualGroupBox2.Border.Visible = true;
+            this.visualGroupBox2.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
+            this.visualGroupBox2.ControlBrushCollection = null;
+            this.visualGroupBox2.Controls.Add(this.chkStoreMessagesLocally);
+            this.visualGroupBox2.ForeColor = System.Drawing.Color.Black;
+            this.visualGroupBox2.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.visualGroupBox2.Location = new System.Drawing.Point(6, 4);
+            this.visualGroupBox2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualGroupBox2.Name = "visualGroupBox2";
+            this.visualGroupBox2.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
+            this.visualGroupBox2.Separator = true;
+            this.visualGroupBox2.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.visualGroupBox2.Size = new System.Drawing.Size(220, 180);
+            this.visualGroupBox2.TabIndex = 0;
+            this.visualGroupBox2.Text = "Storage";
+            this.visualGroupBox2.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualGroupBox2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualGroupBox2.TitleAlignment = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.TitleAlignments.Top;
+            this.visualGroupBox2.TitleBoxHeight = 25;
+            // 
+            // chkStoreMessagesLocally
+            // 
+            this.chkStoreMessagesLocally.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.chkStoreMessagesLocally.BackgroundStateGradientBrush = null;
+            this.chkStoreMessagesLocally.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.chkStoreMessagesLocally.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.chkStoreMessagesLocally.Border.HoverVisible = true;
+            this.chkStoreMessagesLocally.Border.Rounding = 3;
+            this.chkStoreMessagesLocally.Border.Thickness = 1;
+            this.chkStoreMessagesLocally.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.chkStoreMessagesLocally.Border.Visible = true;
+            this.chkStoreMessagesLocally.Box = new System.Drawing.Size(14, 14);
+            this.chkStoreMessagesLocally.BoxColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.chkStoreMessagesLocally.BoxColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.chkStoreMessagesLocally.BoxColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.chkStoreMessagesLocally.BoxColorState.Pressed = System.Drawing.Color.Silver;
+            this.chkStoreMessagesLocally.BoxSpacing = 2;
+            this.chkStoreMessagesLocally.CheckStyle.AutoSize = true;
+            this.chkStoreMessagesLocally.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 125, 23);
+            this.chkStoreMessagesLocally.CheckStyle.Character = '✔';
+            this.chkStoreMessagesLocally.CheckStyle.CheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(136)))), ((int)(((byte)(45)))));
+            this.chkStoreMessagesLocally.CheckStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.chkStoreMessagesLocally.CheckStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.chkStoreMessagesLocally.CheckStyle.ShapeRounding = 3;
+            this.chkStoreMessagesLocally.CheckStyle.ShapeType = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.chkStoreMessagesLocally.CheckStyle.Style = VisualPlus.Structure.CheckStyle.CheckType.Character;
+            this.chkStoreMessagesLocally.ControlBrushCollection = null;
+            this.chkStoreMessagesLocally.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkStoreMessagesLocally.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.chkStoreMessagesLocally.ForeColor = System.Drawing.Color.Black;
+            this.chkStoreMessagesLocally.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.chkStoreMessagesLocally.IsBoxLarger = false;
+            this.chkStoreMessagesLocally.Location = new System.Drawing.Point(4, 25);
+            this.chkStoreMessagesLocally.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.chkStoreMessagesLocally.Name = "chkStoreMessagesLocally";
+            this.chkStoreMessagesLocally.Size = new System.Drawing.Size(213, 23);
+            this.chkStoreMessagesLocally.TabIndex = 1;
+            this.chkStoreMessagesLocally.Text = "Store messages locally";
+            this.chkStoreMessagesLocally.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.chkStoreMessagesLocally.TextSize = new System.Drawing.Size(145, 20);
+            this.chkStoreMessagesLocally.ToggleChanged += new VisualPlus.Delegates.ToggleChangedEventHandler(this.chkStoreMessagesLocally_ToggleChanged);
             // 
             // UserSettings
             // 
@@ -206,7 +295,7 @@
             border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
             border1.Visible = false;
             this.Image.Border = border1;
-            this.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image1")));
+            this.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image2")));
             this.Image.Point = new System.Drawing.Point(5, 7);
             this.Image.Size = new System.Drawing.Size(16, 16);
             this.Image.Visible = true;
@@ -215,6 +304,8 @@
             this.visualTabControl1.ResumeLayout(false);
             this.notificationsTab.ResumeLayout(false);
             this.visualGroupBox1.ResumeLayout(false);
+            this.messagesTab.ResumeLayout(false);
+            this.visualGroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -226,5 +317,8 @@
         private System.Windows.Forms.TabPage notificationsTab;
         private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox1;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualCheckBox chkNotifyWhenFriendOnline;
+        private System.Windows.Forms.TabPage messagesTab;
+        private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox2;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualCheckBox chkStoreMessagesLocally;
     }
 }

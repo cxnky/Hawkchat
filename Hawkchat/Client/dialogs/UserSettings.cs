@@ -91,14 +91,25 @@ namespace Hawkchat.Client
 
         }
 
-        private void visualCheckBox1_ToggleChanged(VisualPlus.EventArgs.ToggleEventArgs e)
+        private void friendOnlineNotify_ToggleChanged(VisualPlus.EventArgs.ToggleEventArgs e)
         {
 
             string checkedState = e.State.ToString().ToLower();
 
-            UserPreferences.NOTIFY_WHEN_FRIEND_ONLINE = e.State;
+            UserPreferences.Notifications.NOTIFY_WHEN_FRIEND_ONLINE = e.State;
 
             ReplaceConfigValue("friend_online_notify", checkedState);
+
+        }
+
+        private void chkStoreMessagesLocally_ToggleChanged(VisualPlus.EventArgs.ToggleEventArgs e)
+        {
+
+            string checkedState = e.State.ToString().ToLower();
+
+            UserPreferences.Messaging.STORE_MESSAGES_LOCALLY = e.State;
+
+            ReplaceConfigValue("store_messages_locally", checkedState);
 
         }
     }
