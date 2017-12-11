@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             VisualPlus.Structure.Border border2 = new VisualPlus.Structure.Border();
             VisualPlus.Structure.Border border3 = new VisualPlus.Structure.Border();
             VisualPlus.Structure.Border border4 = new VisualPlus.Structure.Border();
@@ -40,10 +42,9 @@
             VisualPlus.Structure.Border border10 = new VisualPlus.Structure.Border();
             VisualPlus.Structure.Border border11 = new VisualPlus.Structure.Border();
             VisualPlus.Structure.Border border12 = new VisualPlus.Structure.Border();
-            VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             VisualPlus.Structure.Border border13 = new VisualPlus.Structure.Border();
             this.groupBoxUserInfo = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
+            this.btnPerformModeration = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.userProfilePicture = new System.Windows.Forms.PictureBox();
             this.visualButton1 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.lblLoggedInUserStatus = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
@@ -70,8 +71,7 @@
             this.visualButton6 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualButton7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualLabel4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualComboBox1 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
-            this.btnPerformModeration = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+            this.sortComboBox = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.groupBoxUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userProfilePicture)).BeginInit();
             this.visualPanel1.SuspendLayout();
@@ -118,6 +118,50 @@
             this.groupBoxUserInfo.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.groupBoxUserInfo.TitleAlignment = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.TitleAlignments.Top;
             this.groupBoxUserInfo.TitleBoxHeight = 25;
+            // 
+            // btnPerformModeration
+            // 
+            this.btnPerformModeration.Animation = true;
+            this.btnPerformModeration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnPerformModeration.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPerformModeration.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.btnPerformModeration.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPerformModeration.BackColorState.Pressed = System.Drawing.Color.Silver;
+            this.btnPerformModeration.BackgroundStateGradientBrush = null;
+            this.btnPerformModeration.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnPerformModeration.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.btnPerformModeration.Border.HoverVisible = true;
+            this.btnPerformModeration.Border.Rounding = 6;
+            this.btnPerformModeration.Border.Thickness = 1;
+            this.btnPerformModeration.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.btnPerformModeration.Border.Visible = true;
+            this.btnPerformModeration.ControlBrushCollection = null;
+            this.btnPerformModeration.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnPerformModeration.ForeColor = System.Drawing.Color.Black;
+            this.btnPerformModeration.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            border1.HoverVisible = false;
+            border1.Rounding = 6;
+            border1.Thickness = 1;
+            border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            border1.Visible = false;
+            this.btnPerformModeration.Image.Border = border1;
+            this.btnPerformModeration.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
+            this.btnPerformModeration.Image.Point = new System.Drawing.Point(50, -4);
+            this.btnPerformModeration.Image.Size = new System.Drawing.Size(24, 24);
+            this.btnPerformModeration.Image.Visible = false;
+            this.btnPerformModeration.Location = new System.Drawing.Point(117, 40);
+            this.btnPerformModeration.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPerformModeration.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.btnPerformModeration.Name = "btnPerformModeration";
+            this.btnPerformModeration.Size = new System.Drawing.Size(124, 17);
+            this.btnPerformModeration.TabIndex = 7;
+            this.btnPerformModeration.Text = "Moderation";
+            this.btnPerformModeration.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.btnPerformModeration.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.btnPerformModeration.Visible = false;
+            this.btnPerformModeration.Click += new System.EventHandler(this.btnPerformModeration_Click);
             // 
             // userProfilePicture
             // 
@@ -1015,99 +1059,55 @@
             this.visualLabel4.Text = "Busy";
             this.visualLabel4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
-            // visualComboBox1
+            // sortComboBox
             // 
-            this.visualComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.visualComboBox1.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualComboBox1.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.visualComboBox1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.visualComboBox1.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualComboBox1.Border.HoverVisible = true;
-            this.visualComboBox1.Border.Rounding = 6;
-            this.visualComboBox1.Border.Thickness = 1;
-            this.visualComboBox1.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualComboBox1.Border.Visible = true;
-            this.visualComboBox1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(118)))));
-            this.visualComboBox1.ButtonHorizontal = VisualPlus.Enumerators.Alignment.Horizontal.Right;
-            this.visualComboBox1.ButtonStyles = VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox.DropDownButtons.Arrow;
-            this.visualComboBox1.ButtonWidth = 30;
-            this.visualComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.visualComboBox1.DropDownHeight = 100;
-            this.visualComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.visualComboBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualComboBox1.FormattingEnabled = true;
-            this.visualComboBox1.IntegralHeight = false;
-            this.visualComboBox1.ItemHeight = 20;
-            this.visualComboBox1.Items.AddRange(new object[] {
-            "Sort Contacts.........",
+            this.sortComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            this.sortComboBox.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.sortComboBox.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            this.sortComboBox.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.sortComboBox.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.sortComboBox.Border.HoverVisible = true;
+            this.sortComboBox.Border.Rounding = 6;
+            this.sortComboBox.Border.Thickness = 1;
+            this.sortComboBox.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.sortComboBox.Border.Visible = true;
+            this.sortComboBox.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(118)))));
+            this.sortComboBox.ButtonHorizontal = VisualPlus.Enumerators.Alignment.Horizontal.Right;
+            this.sortComboBox.ButtonStyles = VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox.DropDownButtons.Arrow;
+            this.sortComboBox.ButtonWidth = 30;
+            this.sortComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.sortComboBox.DropDownHeight = 100;
+            this.sortComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sortComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.sortComboBox.FormattingEnabled = true;
+            this.sortComboBox.IntegralHeight = false;
+            this.sortComboBox.ItemHeight = 20;
+            this.sortComboBox.Items.AddRange(new object[] {
+            "Sort Contacts...",
             "Alphabetical A-Z",
             "Alphabetical Z-A",
             "Online First",
             "Offline First"});
-            this.visualComboBox1.Location = new System.Drawing.Point(16, 176);
-            this.visualComboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.visualComboBox1.MenuItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.visualComboBox1.MenuItemNormal = System.Drawing.Color.White;
-            this.visualComboBox1.MenuTextColor = System.Drawing.Color.Black;
-            this.visualComboBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualComboBox1.Name = "visualComboBox1";
-            this.visualComboBox1.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(222)))), ((int)(((byte)(220)))));
-            this.visualComboBox1.Size = new System.Drawing.Size(293, 26);
-            this.visualComboBox1.StartIndex = 0;
-            this.visualComboBox1.State = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualComboBox1.TabIndex = 7;
-            this.visualComboBox1.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.visualComboBox1.TextDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualComboBox1.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualComboBox1.Watermark.ActiveColor = System.Drawing.Color.Gray;
-            this.visualComboBox1.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualComboBox1.Watermark.InactiveColor = System.Drawing.Color.LightGray;
-            this.visualComboBox1.Watermark.Text = "Watermark text";
-            this.visualComboBox1.Watermark.Visible = false;
-            // 
-            // btnPerformModeration
-            // 
-            this.btnPerformModeration.Animation = true;
-            this.btnPerformModeration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.btnPerformModeration.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnPerformModeration.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.btnPerformModeration.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnPerformModeration.BackColorState.Pressed = System.Drawing.Color.Silver;
-            this.btnPerformModeration.BackgroundStateGradientBrush = null;
-            this.btnPerformModeration.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.btnPerformModeration.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.btnPerformModeration.Border.HoverVisible = true;
-            this.btnPerformModeration.Border.Rounding = 6;
-            this.btnPerformModeration.Border.Thickness = 1;
-            this.btnPerformModeration.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.btnPerformModeration.Border.Visible = true;
-            this.btnPerformModeration.ControlBrushCollection = null;
-            this.btnPerformModeration.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnPerformModeration.ForeColor = System.Drawing.Color.Black;
-            this.btnPerformModeration.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            border1.HoverVisible = false;
-            border1.Rounding = 6;
-            border1.Thickness = 1;
-            border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            border1.Visible = false;
-            this.btnPerformModeration.Image.Border = border1;
-            this.btnPerformModeration.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
-            this.btnPerformModeration.Image.Point = new System.Drawing.Point(50, -4);
-            this.btnPerformModeration.Image.Size = new System.Drawing.Size(24, 24);
-            this.btnPerformModeration.Image.Visible = false;
-            this.btnPerformModeration.Location = new System.Drawing.Point(117, 40);
-            this.btnPerformModeration.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPerformModeration.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.btnPerformModeration.Name = "btnPerformModeration";
-            this.btnPerformModeration.Size = new System.Drawing.Size(124, 17);
-            this.btnPerformModeration.TabIndex = 7;
-            this.btnPerformModeration.Text = "Moderation";
-            this.btnPerformModeration.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.btnPerformModeration.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.btnPerformModeration.Visible = false;
-            this.btnPerformModeration.Click += new System.EventHandler(this.btnPerformModeration_Click);
+            this.sortComboBox.Location = new System.Drawing.Point(16, 176);
+            this.sortComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.sortComboBox.MenuItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.sortComboBox.MenuItemNormal = System.Drawing.Color.White;
+            this.sortComboBox.MenuTextColor = System.Drawing.Color.Black;
+            this.sortComboBox.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.sortComboBox.Name = "sortComboBox";
+            this.sortComboBox.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(222)))), ((int)(((byte)(220)))));
+            this.sortComboBox.Size = new System.Drawing.Size(293, 26);
+            this.sortComboBox.StartIndex = 0;
+            this.sortComboBox.State = VisualPlus.Enumerators.MouseStates.Normal;
+            this.sortComboBox.TabIndex = 7;
+            this.sortComboBox.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.sortComboBox.TextDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.sortComboBox.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.sortComboBox.Watermark.ActiveColor = System.Drawing.Color.Gray;
+            this.sortComboBox.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.sortComboBox.Watermark.InactiveColor = System.Drawing.Color.LightGray;
+            this.sortComboBox.Watermark.Text = "Watermark text";
+            this.sortComboBox.Watermark.Visible = false;
             // 
             // MainWindow
             // 
@@ -1121,7 +1121,7 @@
             this.Border.Type = VisualPlus.Enumerators.ShapeType.Rectangle;
             this.Border.Visible = true;
             this.ClientSize = new System.Drawing.Size(881, 538);
-            this.Controls.Add(this.visualComboBox1);
+            this.Controls.Add(this.sortComboBox);
             this.Controls.Add(this.visualGroupBox4);
             this.Controls.Add(this.visualGroupBox3);
             this.Controls.Add(this.visualGroupBox2);
@@ -1186,7 +1186,7 @@
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton6;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton7;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel4;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox visualComboBox1;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox sortComboBox;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton btnEndConversation;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton btnReportUser;
         private System.Windows.Forms.PictureBox userProfilePicture;

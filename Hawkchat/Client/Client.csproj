@@ -111,6 +111,12 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSettings.Designer.cs">
+      <DependentUpon>UserSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="utils\Constants.cs" />
     <Compile Include="utils\Utils.cs" />
     <EmbeddedResource Include="admin\AdminTools.resx">
