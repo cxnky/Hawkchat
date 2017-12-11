@@ -3,6 +3,7 @@ using Hawkchat.Client.admin;
 using Hawkchat.Client.utils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SimpleTCP;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,7 +88,7 @@ namespace Hawkchat.Client
             }
 
             this.Text = "Hawk Chat";
-            this.Size = Constants.SMALL_WINDOW;
+            this.Size = Constants.LARGE_WINDOW;
             
             btnEndConversation.Visible = false;
             visualPanel1.Visible = false;
@@ -133,6 +134,35 @@ namespace Hawkchat.Client
 
             adminTools.ShowDialog();
             
+        }
+
+        private void btnSendMessage_Click(object sender, EventArgs e)
+        {
+
+            // send to a test account
+            // flow:
+            // client -> want to establish connection to <id> -> server gets that IP and port and forwards it back -> p2p
+            string toAccountID = "93605610";
+            string message = txtMessage.Text.Trim();
+
+            dynamic json = new JObject();
+
+            json.command = "ESTABLISHCONNECTION";
+            json.accountid = toAccountID;
+
+            SimpleTCP.Message m = LoginWindow.client.WriteLineAndGetReply(json.ToString(), TimeSpan.FromSeconds(30));
+
+            // message should contain IP and port to contact the user
+            JObject returnedJson = JObject.Parse(m.MessageString);
+
+            string remoteIP = returnedJson["ip"].ToString();
+            string remotePort = returnedJson["port"].ToString();
+
+            // Server should send message to these two clients with the IP and port to connect to 
+            SimpleTcpClient client = new SimpleTcpClient().Connect(remoteIP, int.Parse(remotePort));
+
+            client.Write(txtMessage.Text.Trim());
+
         }
     }
 }

@@ -32,7 +32,7 @@ namespace Hawkchat.Client
             try
             {
 #if DEBUG
-                client = new SimpleTcpClient().Connect("127.0.0.1", 3289);
+                client = new SimpleTcpClient().Connect("81.109.173.49", 3289);
 #else
                client = new SimpleTcpClient().Connect("server ip", 3289);
 #endif
@@ -198,6 +198,7 @@ namespace Hawkchat.Client
 
         private void LoginWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
+
             if (client.TcpClient.Connected)
             {
                 dynamic disconnectJson = new JObject();

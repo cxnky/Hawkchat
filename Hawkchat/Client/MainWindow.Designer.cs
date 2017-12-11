@@ -72,6 +72,7 @@
             this.visualButton7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualLabel4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.sortComboBox = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
+            this.visualListBox1 = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
             this.groupBoxUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userProfilePicture)).BeginInit();
             this.visualPanel1.SuspendLayout();
@@ -311,10 +312,11 @@
             this.visualPanel1.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
             this.visualPanel1.Border.Visible = true;
             this.visualPanel1.ControlBrushCollection = null;
+            this.visualPanel1.Controls.Add(this.lblNoMessages);
+            this.visualPanel1.Controls.Add(this.visualListBox1);
             this.visualPanel1.Controls.Add(this.btnEndConversation);
             this.visualPanel1.Controls.Add(this.btnReportUser);
             this.visualPanel1.Controls.Add(this.btnRequestMore);
-            this.visualPanel1.Controls.Add(this.lblNoMessages);
             this.visualPanel1.Controls.Add(this.btnSendMessage);
             this.visualPanel1.Controls.Add(this.txtMessage);
             this.visualPanel1.ForeColor = System.Drawing.Color.Black;
@@ -467,7 +469,7 @@
             this.lblNoMessages.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.lblNoMessages.ForeColor = System.Drawing.Color.Black;
             this.lblNoMessages.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.lblNoMessages.Location = new System.Drawing.Point(168, 25);
+            this.lblNoMessages.Location = new System.Drawing.Point(140, 406);
             this.lblNoMessages.Margin = new System.Windows.Forms.Padding(4);
             this.lblNoMessages.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.lblNoMessages.Name = "lblNoMessages";
@@ -529,6 +531,7 @@
             this.btnSendMessage.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.btnSendMessage.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.btnSendMessage.Visible = false;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 
             // txtMessage
             // 
@@ -1109,6 +1112,35 @@
             this.sortComboBox.Watermark.Text = "Watermark text";
             this.sortComboBox.Watermark.Visible = false;
             // 
+            // visualListBox1
+            // 
+            this.visualListBox1.AlternateColors = false;
+            this.visualListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.visualListBox1.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.visualListBox1.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            this.visualListBox1.BackgroundStateGradientBrush = null;
+            this.visualListBox1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.visualListBox1.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.visualListBox1.Border.HoverVisible = true;
+            this.visualListBox1.Border.Rounding = 6;
+            this.visualListBox1.Border.Thickness = 1;
+            this.visualListBox1.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.visualListBox1.Border.Visible = true;
+            this.visualListBox1.ControlBrushCollection = null;
+            this.visualListBox1.ForeColor = System.Drawing.Color.Black;
+            this.visualListBox1.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.visualListBox1.ItemAlternate = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.visualListBox1.ItemHeight = 18;
+            this.visualListBox1.ItemNormal = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            this.visualListBox1.ItemSelected = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.visualListBox1.Location = new System.Drawing.Point(4, 25);
+            this.visualListBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualListBox1.Name = "visualListBox1";
+            this.visualListBox1.Size = new System.Drawing.Size(541, 373);
+            this.visualListBox1.TabIndex = 6;
+            this.visualListBox1.Text = "visualListBox1";
+            this.visualListBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1194,5 +1226,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton btnPerformModeration;
+        private VisualPlus.Toolkit.Controls.DataManagement.VisualListBox visualListBox1;
     }
 }

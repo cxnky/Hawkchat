@@ -30,6 +30,15 @@ namespace Hawkchat.Server.utils
 
         }
 
+        public static ClientModel ReturnClientByID(string ID)
+        {
+
+            Int32 id = Int32.Parse(ID);
+
+            return loggedinUsers.FirstOrDefault(u => u.UserID == id);
+
+        }
+
         public static string CreateChatLog(JObject json, UserReport report)
         {
 

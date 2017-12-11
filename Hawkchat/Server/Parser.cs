@@ -1,5 +1,6 @@
 ﻿using Hawkchat.Server.enums;
 using Hawkchat.Server.models;
+using Hawkchat.Server.Models;
 using Hawkchat.Server.utils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -54,6 +55,19 @@ namespace Hawkchat.Server
 
                     break;
 
+                case "ESTABLISHCONNECTION":
+
+                    string accountID = json["accountid"].ToString();
+
+                    ClientModel client = Util.ReturnClientByID(accountID);
+
+                    jsonResponse.ip = client.IP;
+                    jsonResponse.port = client.Port;
+
+                    message.Reply(jsonResponse.ToString());
+
+                    break;
+                    
                 case "AUTH":
 
                     SQLiteConnection connection = DBUtils.EstablishConnection();
