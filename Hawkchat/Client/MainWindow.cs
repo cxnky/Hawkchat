@@ -90,13 +90,13 @@ namespace Hawkchat.Client
             this.Text = "Hawk Chat";
             this.Size = Constants.LARGE_WINDOW;
             
-            btnEndConversation.Visible = false;
-            visualPanel1.Visible = false;
-            btnReportUser.Visible = false;
-            btnRequestMore.Visible = false;
-            btnSendMessage.Visible = false;
+            btnEndConversation.Visible = true;
+            visualPanel1.Visible = true;
+            btnReportUser.Visible = true;
+            btnRequestMore.Visible = true;
+            btnSendMessage.Visible = true;
 
-            txtMessage.Visible = false;
+            txtMessage.Visible = true;
             
             this.Update();
 
@@ -142,7 +142,7 @@ namespace Hawkchat.Client
             // send to a test account
             // flow:
             // client -> want to establish connection to <id> -> server gets that IP and port and forwards it back -> p2p
-            string toAccountID = "93605610";
+            string toAccountID = "23948739";
             string message = txtMessage.Text.Trim();
 
             dynamic json = new JObject();
