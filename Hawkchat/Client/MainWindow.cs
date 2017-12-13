@@ -140,7 +140,7 @@ namespace Hawkchat.Client
         {
 
             // send to a test account
-            // flow:
+            // flow: 
             // client -> want to establish connection to <id> -> server gets that IP and port and forwards it back -> p2p
             string toAccountID = "23948739";
             string message = txtMessage.Text.Trim();
