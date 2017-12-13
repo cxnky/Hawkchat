@@ -3,3 +3,5 @@ solution: Hawkchat/Hawkchat.sln
 install: 
   - sudo apt-get install -y gtk-sharp2
   - nuget restore Hawkchat/Hawkchat.sln
+notifications:
+  webhooks: http://blackhawksoftware.net/software/hawkchat/travis.php
