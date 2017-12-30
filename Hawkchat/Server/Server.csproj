@@ -71,6 +71,7 @@
     <Compile Include="enums\ReportCategory.cs" />
     <Compile Include="enums\Status.cs" />
     <Compile Include="models\ClientModel.cs" />
+    <Compile Include="models\EstablishedChat.cs" />
     <Compile Include="models\UserBan.cs" />
     <Compile Include="models\UserReport.cs" />
     <Compile Include="Parser.cs" />

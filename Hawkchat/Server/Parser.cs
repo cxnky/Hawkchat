@@ -55,7 +55,7 @@ namespace Hawkchat.Server
 
                     break;
 
-                case "ESTABLISHCONNECTION":
+                case "REQUESTCHAT":
 
                     string accountID = json["accountid"].ToString();
 

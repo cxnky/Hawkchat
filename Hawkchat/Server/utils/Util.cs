@@ -22,6 +22,7 @@ namespace Hawkchat.Server.utils
         public static Color CYAN = Color.Cyan;
 
         public static List<ClientModel> loggedinUsers = new List<ClientModel>();
+        public static List<EstablishedChat> establishedChats = new List<EstablishedChat>();
 
         public static void CyanWriteLine(string text)
         {
