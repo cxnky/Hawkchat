@@ -90,6 +90,7 @@
     <Compile Include="dialogs\BannedWindow.Designer.cs">
       <DependentUpon>BannedWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="enums\UserStatus.cs" />
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>

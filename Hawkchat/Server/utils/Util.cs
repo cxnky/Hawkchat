@@ -40,6 +40,33 @@ namespace Hawkchat.Server.utils
 
         }
 
+        public static string GetAvatarURL(long userID)
+        {
+
+            DBUtils utils = new DBUtils();
+
+            SQLiteConnection connection = utils.EstablishConnection();
+
+            string query = $"SELECT * FROM users WHERE AccountID='{userID}'";
+
+            SQLiteDataReader reader = utils.ExecuteReader(connection, query);
+
+            string avatarURL = "";
+
+            while (reader.Read())
+            {
+
+                avatarURL = reader["avatarurl"].ToString();
+
+            }
+
+            reader.Close();
+            utils.CloseConnection(connection);
+
+            return avatarURL;
+
+        }
+
         public static string CreateChatLog(JObject json, UserReport report)
         {
 
@@ -135,15 +162,16 @@ namespace Hawkchat.Server.utils
         public static async Task<bool> CreateReport(UserReport report)
         {
 
-            SQLiteConnection connection = DBUtils.EstablishConnection();
+            DBUtils utils = new DBUtils();
+            SQLiteConnection connection = utils.EstablishConnection();
 
             string timeStamp = report.Timestamp.ToString();
 
             string query = $"INSERT INTO reports (id, reporter, reported, category, logurl, timestamp) VALUES ('{report.ReportID}', '{report.ReporterAccountID}', '{report.ReportedAccountID}', '{report.ReportCategory.ToString()}', '{report.ChatLogURL}', '{timeStamp}')";
 
-            int rowsAffected = await DBUtils.ExecuteNonQuery(connection, query);
+            int rowsAffected = await utils.ExecuteNonQuery(connection, query);
 
-            DBUtils.CloseConnection(connection);
+            utils.CloseConnection(connection);
 
             return rowsAffected == 1;
 

@@ -1,4 +1,5 @@
 ﻿using Hawkchat.Server.enums;
+using Hawkchat.Server.Enums;
 using Hawkchat.Server.models;
 using Hawkchat.Server.Models;
 using Hawkchat.Server.utils;
@@ -7,6 +8,7 @@ using Newtonsoft.Json.Linq;
 using SimpleTCP;
 using System;
 using System.Data.SQLite;
+using System.Windows.Forms;
 
 namespace Hawkchat.Server
 {
@@ -16,10 +18,11 @@ namespace Hawkchat.Server
         public static bool messagesDisabled = false, messagesEnabled = true;
         public static string REASON = "";
 
-        public static async void ParseCommand(string command, Message message, JObject json = null)
+        public static async void ParseCommand(string command, SimpleTCP.Message message, JObject json = null)
         {
 
             dynamic jsonResponse = new JObject();
+            DBUtils utils = new DBUtils();
 
             switch (command)
             {
@@ -57,20 +60,34 @@ namespace Hawkchat.Server
 
                 case "REQUESTCHAT":
 
-                    string accountID = json["accountid"].ToString();
+                    string requesterAccountID = json["myaccountid"].ToString();
+                    string otherAccountID = json["otheraccountid"].ToString();
 
-                    ClientModel client = Util.ReturnClientByID(accountID);
+                    ClientModel requesterClient = Util.ReturnClientByID(requesterAccountID);
+                    ClientModel recipientClient = Util.ReturnClientByID(otherAccountID);
 
-                    jsonResponse.ip = client.IP;
-                    jsonResponse.port = client.Port;
+                    EstablishedChat chat = new EstablishedChat
+                    {
+                        PersonOneAccountID = requesterClient.UserID,
+                        PersonTwoAccountID = recipientClient.UserID,
+                        PersonTwoUsername = recipientClient.Username,
+                        RecipientAvatarURL = Util.GetAvatarURL(recipientClient.UserID),
+                        CurrentStatus = UserStatus.ONLINE,
+                        EstablishedOn = DateTime.UtcNow
+                    };
 
-                    message.Reply(jsonResponse.ToString());
+                    Util.establishedChats.Add(chat);
+
+                    jsonResponse.success = true;
+                    jsonResponse.recipientinfo = JsonConvert.SerializeObject(chat);
+                    
+                    message.Reply(jsonResponse.ToString(Formatting.None));
 
                     break;
                     
                 case "AUTH":
 
-                    SQLiteConnection connection = DBUtils.EstablishConnection();
+                    SQLiteConnection connection = utils.EstablishConnection();
 
                     string username = json["username"].ToString();
                     string password = json["password"].ToString();
@@ -78,7 +95,7 @@ namespace Hawkchat.Server
                     // check to see if the user is banned
                     string query = $"SELECT * FROM users WHERE username='{username}' AND password='{password}'";
 
-                    SQLiteDataReader reader = DBUtils.ExecuteReader(connection, query);
+                    SQLiteDataReader reader = utils.ExecuteReader(connection, query);
 
                     if (reader.HasRows)
                     {
@@ -91,7 +108,7 @@ namespace Hawkchat.Server
                         jsonResponse.authenticated = false;
                         jsonResponse.reason = "CREDENTIALS";
 
-                        DBUtils.CloseConnection(connection);
+                        utils.CloseConnection(connection);
 
                         message.Reply(jsonResponse.ToString(Formatting.None));
 
@@ -113,7 +130,7 @@ namespace Hawkchat.Server
 
                     string banQuery = $"SELECT * FROM bans WHERE accountid='{UserID}'";
 
-                    SQLiteDataReader banReader = DBUtils.ExecuteReader(connection, banQuery);
+                    SQLiteDataReader banReader = utils.ExecuteReader(connection, banQuery);
 
                     if (banReader.HasRows)
                     {
@@ -154,7 +171,7 @@ namespace Hawkchat.Server
 
                     }
 
-                    DBUtils.CloseConnection(connection);
+                    utils.CloseConnection(connection);
 
                     message.Reply(jsonResponse.ToString(Formatting.None));
 
@@ -187,9 +204,9 @@ namespace Hawkchat.Server
 
                     long AccountID = Util.GenerateAccountID();
 
-                    SQLiteConnection sQLiteConnection = DBUtils.EstablishConnection();
+                    SQLiteConnection sQLiteConnection = utils.EstablishConnection();
 
-                    int rowsAffected = await DBUtils.ExecuteNonQuery(sQLiteConnection, $"INSERT INTO users (AccountID, username, password, avatarurl, lastip) VALUES ('{AccountID}', '{usrName}', '{pwd}', '{avatarURLl}', '{IPAddress}')");
+                    int rowsAffected = await utils.ExecuteNonQuery(sQLiteConnection, $"INSERT INTO users (AccountID, username, password, avatarurl, lastip) VALUES ('{AccountID}', '{usrName}', '{pwd}', '{avatarURLl}', '{IPAddress}')");
 
 
                     if (rowsAffected == 1)
@@ -200,7 +217,7 @@ namespace Hawkchat.Server
                         jsonResponse.username = usrName;
                         jsonResponse.avatarURL = avatarURLl;
 
-                        DBUtils.CloseConnection(sQLiteConnection);
+                        utils.CloseConnection(sQLiteConnection);
 
                         message.Reply(jsonResponse.ToString(Formatting.None));
 
@@ -209,7 +226,7 @@ namespace Hawkchat.Server
 
                         jsonResponse.success = false;
 
-                        DBUtils.CloseConnection(sQLiteConnection);
+                        utils.CloseConnection(sQLiteConnection);
 
                         message.Reply(jsonResponse.ToString(Formatting.None));
 
@@ -221,9 +238,9 @@ namespace Hawkchat.Server
 
                     string usernameToCheck = json["username"].ToString();
 
-                    SQLiteConnection conn = DBUtils.EstablishConnection();
+                    SQLiteConnection conn = utils.EstablishConnection();
 
-                    SQLiteDataReader dataReader = DBUtils.ExecuteReader(conn, $"SELECT * FROM users WHERE username='{usernameToCheck}'");
+                    SQLiteDataReader dataReader = utils.ExecuteReader(conn, $"SELECT * FROM users WHERE username='{usernameToCheck}'");
 
                     if (dataReader.HasRows)
                     {
@@ -239,7 +256,7 @@ namespace Hawkchat.Server
 
                     dataReader.Close();
 
-                    DBUtils.CloseConnection(conn);
+                    utils.CloseConnection(conn);
 
                     message.Reply(jsonResponse.ToString(Formatting.None));
 

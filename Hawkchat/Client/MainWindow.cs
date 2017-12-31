@@ -1,5 +1,6 @@
 ﻿using AutoUpdaterDotNET;
 using Hawkchat.Client.admin;
+using Hawkchat.Client.enums;
 using Hawkchat.Client.utils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -148,20 +149,36 @@ namespace Hawkchat.Client
             dynamic json = new JObject();
 
             json.command = "REQUESTCHAT";
-            json.accountid = toAccountID;
+            json.myaccountid = LoginWindow.ACCOUNTID;
+            json.otheraccountid = toAccountID;
 
             SimpleTCP.Message m = LoginWindow.client.WriteLineAndGetReply(json.ToString(), TimeSpan.FromSeconds(30));
 
             // message should contain IP and port to contact the user
             JObject returnedJson = JObject.Parse(m.MessageString);
 
-            string remoteIP = returnedJson["ip"].ToString();
-            string remotePort = returnedJson["port"].ToString();
+            if (bool.Parse(returnedJson["success"].ToString()))
+            {
 
-            // Server should send message to these two clients with the IP and port to connect to 
-            SimpleTcpClient client = new SimpleTcpClient().Connect(remoteIP, int.Parse(remotePort));
+                // get the recipient user information to show on the HawkChat window.
+                JObject info = JObject.Parse(returnedJson["recipientinfo"].ToString());
 
-            client.Write(txtMessage.Text.Trim());
+                string avatarURL = info["RecipientAvatarURL"].ToString();
+                UserStatus currentStatus = (UserStatus)int.Parse(info["CurrentStatus"].ToString());
+                string username = info["PersonTwoUsername"].ToString();
+
+                Tuple<string, Color> userStatus = Utils.GetUserStatusText(currentStatus);
+
+                lblConversationUserStatus.Text = userStatus.Item1;
+                lblConversationUserStatus.ForeColor = userStatus.Item2;
+
+                lblConversationUserStatus.Update();
+                this.Update();
+
+                conversationOneBox.Text = username;
+                conversationBoxOne.ImageLocation = avatarURL;
+
+            }
 
         }
     }

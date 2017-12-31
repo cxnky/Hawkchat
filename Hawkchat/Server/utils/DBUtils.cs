@@ -10,7 +10,7 @@ namespace Hawkchat.Server.utils
     public class DBUtils
     {
 
-        public static SQLiteConnection EstablishConnection()
+        public SQLiteConnection EstablishConnection()
         {
 
             SQLiteConnection connection = new SQLiteConnection("Data Source=db/hawkchat.sqlite;Version=3");
@@ -20,7 +20,7 @@ namespace Hawkchat.Server.utils
 
         }
 
-        public static async Task<int> ExecuteNonQuery(SQLiteConnection connection, string query)
+        public async Task<int> ExecuteNonQuery(SQLiteConnection connection, string query)
         {
 
             SQLiteCommand command = new SQLiteCommand(query, connection);
@@ -31,7 +31,7 @@ namespace Hawkchat.Server.utils
 
         }
 
-        public static SQLiteDataReader ExecuteReader(SQLiteConnection connection, string query)
+        public SQLiteDataReader ExecuteReader(SQLiteConnection connection, string query)
         {
 
             SQLiteCommand command = new SQLiteCommand(query, connection);
@@ -40,7 +40,7 @@ namespace Hawkchat.Server.utils
 
         }
 
-        public static void CloseConnection(SQLiteConnection connection)
+        public void CloseConnection(SQLiteConnection connection)
         {
 
             connection.Close();
