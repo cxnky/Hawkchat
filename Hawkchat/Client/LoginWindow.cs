@@ -55,7 +55,7 @@ namespace Hawkchat.Client
         private ClientModel GetSenderInfo(ulong id)
         {
 
-                     
+            return null;
 
         }
 
@@ -82,7 +82,7 @@ namespace Hawkchat.Client
                     case "NEWCHAT":
                         ulong RequesterID = ulong.Parse(json["requesterid"].ToString());
 
-
+                        break;
 
                     case "ENABLEMESSAGING":
                         mainWindow.ReceivedEnableMessaging();
