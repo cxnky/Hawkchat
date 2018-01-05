@@ -66,12 +66,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.visualButton4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualButton5 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-            this.visualLabel3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.lblAway = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualGroupBox4 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.visualButton6 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
             this.visualButton7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-            this.visualLabel4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.lblBusy = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.sortComboBox = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.groupBoxUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userProfilePicture)).BeginInit();
@@ -791,7 +791,7 @@
             this.visualGroupBox3.Controls.Add(this.pictureBox2);
             this.visualGroupBox3.Controls.Add(this.visualButton4);
             this.visualGroupBox3.Controls.Add(this.visualButton5);
-            this.visualGroupBox3.Controls.Add(this.visualLabel3);
+            this.visualGroupBox3.Controls.Add(this.lblAway);
             this.visualGroupBox3.ForeColor = System.Drawing.Color.Black;
             this.visualGroupBox3.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             this.visualGroupBox3.Location = new System.Drawing.Point(16, 318);
@@ -905,32 +905,32 @@
             this.visualButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.visualButton5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
-            // visualLabel3
+            // lblAway
             // 
-            this.visualLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualLabel3.BackgroundStateGradientBrush = null;
-            this.visualLabel3.ControlBrushCollection = null;
-            this.visualLabel3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.visualLabel3.ForeColor = System.Drawing.Color.Gold;
-            this.visualLabel3.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualLabel3.Location = new System.Drawing.Point(245, 22);
-            this.visualLabel3.Margin = new System.Windows.Forms.Padding(4);
-            this.visualLabel3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel3.Name = "visualLabel3";
-            this.visualLabel3.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel3.Outline = false;
-            this.visualLabel3.OutlineColor = System.Drawing.Color.Gold;
-            this.visualLabel3.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel3.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel3.ReflectionSpacing = 0;
-            this.visualLabel3.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel3.ShadowDirection = 315;
-            this.visualLabel3.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel3.ShadowOpacity = 100;
-            this.visualLabel3.Size = new System.Drawing.Size(44, 28);
-            this.visualLabel3.TabIndex = 1;
-            this.visualLabel3.Text = "Away";
-            this.visualLabel3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.lblAway.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.lblAway.BackgroundStateGradientBrush = null;
+            this.lblAway.ControlBrushCollection = null;
+            this.lblAway.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAway.ForeColor = System.Drawing.Color.Gold;
+            this.lblAway.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.lblAway.Location = new System.Drawing.Point(245, 22);
+            this.lblAway.Margin = new System.Windows.Forms.Padding(4);
+            this.lblAway.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.lblAway.Name = "lblAway";
+            this.lblAway.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.lblAway.Outline = false;
+            this.lblAway.OutlineColor = System.Drawing.Color.Gold;
+            this.lblAway.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.lblAway.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblAway.ReflectionSpacing = 0;
+            this.lblAway.ShadowColor = System.Drawing.Color.Black;
+            this.lblAway.ShadowDirection = 315;
+            this.lblAway.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.lblAway.ShadowOpacity = 100;
+            this.lblAway.Size = new System.Drawing.Size(44, 28);
+            this.lblAway.TabIndex = 1;
+            this.lblAway.Text = "Away";
+            this.lblAway.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
             // visualGroupBox4
             // 
@@ -950,7 +950,7 @@
             this.visualGroupBox4.Controls.Add(this.pictureBox3);
             this.visualGroupBox4.Controls.Add(this.visualButton6);
             this.visualGroupBox4.Controls.Add(this.visualButton7);
-            this.visualGroupBox4.Controls.Add(this.visualLabel4);
+            this.visualGroupBox4.Controls.Add(this.lblBusy);
             this.visualGroupBox4.ForeColor = System.Drawing.Color.Black;
             this.visualGroupBox4.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             this.visualGroupBox4.Location = new System.Drawing.Point(16, 429);
@@ -1064,32 +1064,32 @@
             this.visualButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.visualButton7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
-            // visualLabel4
+            // lblBusy
             // 
-            this.visualLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.visualLabel4.BackgroundStateGradientBrush = null;
-            this.visualLabel4.ControlBrushCollection = null;
-            this.visualLabel4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.visualLabel4.ForeColor = System.Drawing.Color.Orange;
-            this.visualLabel4.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.visualLabel4.Location = new System.Drawing.Point(249, 22);
-            this.visualLabel4.Margin = new System.Windows.Forms.Padding(4);
-            this.visualLabel4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel4.Name = "visualLabel4";
-            this.visualLabel4.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel4.Outline = false;
-            this.visualLabel4.OutlineColor = System.Drawing.Color.Orange;
-            this.visualLabel4.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel4.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel4.ReflectionSpacing = 0;
-            this.visualLabel4.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel4.ShadowDirection = 315;
-            this.visualLabel4.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel4.ShadowOpacity = 100;
-            this.visualLabel4.Size = new System.Drawing.Size(40, 28);
-            this.visualLabel4.TabIndex = 1;
-            this.visualLabel4.Text = "Busy";
-            this.visualLabel4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.lblBusy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.lblBusy.BackgroundStateGradientBrush = null;
+            this.lblBusy.ControlBrushCollection = null;
+            this.lblBusy.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusy.ForeColor = System.Drawing.Color.Orange;
+            this.lblBusy.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.lblBusy.Location = new System.Drawing.Point(249, 22);
+            this.lblBusy.Margin = new System.Windows.Forms.Padding(4);
+            this.lblBusy.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.lblBusy.Name = "lblBusy";
+            this.lblBusy.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.lblBusy.Outline = false;
+            this.lblBusy.OutlineColor = System.Drawing.Color.Orange;
+            this.lblBusy.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.lblBusy.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblBusy.ReflectionSpacing = 0;
+            this.lblBusy.ShadowColor = System.Drawing.Color.Black;
+            this.lblBusy.ShadowDirection = 315;
+            this.lblBusy.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.lblBusy.ShadowOpacity = 100;
+            this.lblBusy.Size = new System.Drawing.Size(40, 28);
+            this.lblBusy.TabIndex = 1;
+            this.lblBusy.Text = "Busy";
+            this.lblBusy.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
             // sortComboBox
             // 
@@ -1213,11 +1213,11 @@
         private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox3;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton4;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton5;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel3;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel lblAway;
         private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox4;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton6;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton visualButton7;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel4;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel lblBusy;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox sortComboBox;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton btnEndConversation;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualButton btnReportUser;

@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VisualPlus.Toolkit.Controls.Interactivity;
 using VisualPlus.Toolkit.Controls.Layout;
 
 namespace Hawkchat.Client
@@ -23,7 +24,14 @@ namespace Hawkchat.Client
         public MainWindow()
         {
             InitializeComponent();
+
+            Constants.AWAY_LABEL = lblAway;
+            Constants.ONLINE_LABEL = lblConversationUserStatus;
+            Constants.DND_LABEL = lblBusy;
+            Constants.OFFLINE_LABEL = lblLoggedInUserStatus;
+
         }
+
 
         public void ReceivedEnableMessaging()
         {
@@ -167,10 +175,9 @@ namespace Hawkchat.Client
                 UserStatus currentStatus = (UserStatus)int.Parse(info["CurrentStatus"].ToString());
                 string username = info["PersonTwoUsername"].ToString();
 
-                Tuple<string, Color> userStatus = Utils.GetUserStatusText(currentStatus);
+                Tuple<string, VisualLabel> userStatus = Utils.GetUserStatusText(currentStatus);
 
-                lblConversationUserStatus.Text = userStatus.Item1;
-                lblConversationUserStatus.ForeColor = userStatus.Item2;
+                lblConversationUserStatus = userStatus.Item2;
 
                 lblConversationUserStatus.Update();
                 this.Update();
@@ -181,5 +188,6 @@ namespace Hawkchat.Client
             }
 
         }
+        
     }
 }

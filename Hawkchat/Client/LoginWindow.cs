@@ -1,4 +1,5 @@
 ﻿using Hawkchat.Client.models;
+using Hawkchat.Client.Models;
 using Hawkchat.Client.utils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -32,7 +33,7 @@ namespace Hawkchat.Client
             try
             {
 #if DEBUG
-                client = new SimpleTcpClient().Connect("81.109.173.49", 3289);
+                client = new SimpleTcpClient().Connect("127.0.0.1", 3289);
 #else
                client = new SimpleTcpClient().Connect("server ip", 3289);
 #endif
@@ -49,6 +50,13 @@ namespace Hawkchat.Client
                 Environment.Exit(-1);
 
             }
+        }
+
+        private ClientModel GetSenderInfo(ulong id)
+        {
+
+                     
+
         }
 
         public static string REASON;
@@ -70,6 +78,11 @@ namespace Hawkchat.Client
                         mainWindow.ReceivedDisableMessaging();
 
                         break;
+
+                    case "NEWCHAT":
+                        ulong RequesterID = ulong.Parse(json["requesterid"].ToString());
+
+
 
                     case "ENABLEMESSAGING":
                         mainWindow.ReceivedEnableMessaging();
